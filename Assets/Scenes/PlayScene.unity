@@ -474,7 +474,7 @@ Transform:
   m_GameObject: {fileID: 391415605}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.302, y: -2.718, z: 0}
+  m_LocalPosition: {x: -0.86, y: -4.87, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2799,11 +2799,11 @@ PrefabInstance:
     - target: {fileID: 1669380452930316462, guid: a385faa541be393479377732b7a53ed5, type: 3}
       propertyPath: 'fieldPatterns.Array.data[0]'
       value: 
-      objectReference: {fileID: 85277839}
+      objectReference: {fileID: 698998001}
     - target: {fileID: 1669380452930316462, guid: a385faa541be393479377732b7a53ed5, type: 3}
       propertyPath: 'fieldPatterns.Array.data[1]'
       value: 
-      objectReference: {fileID: 698998001}
+      objectReference: {fileID: 85277839}
     - target: {fileID: 1669380452930316462, guid: a385faa541be393479377732b7a53ed5, type: 3}
       propertyPath: 'fieldPatterns.Array.data[2]'
       value: 
@@ -2912,6 +2912,14 @@ PrefabInstance:
     - target: {fileID: 2799761252764357332, guid: c58903ad2b18ec6438358ad398aa2175, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799226257881493995, guid: c58903ad2b18ec6438358ad398aa2175, type: 3}
+      propertyPath: maxSpawnEnemyCnt
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799226257881493995, guid: c58903ad2b18ec6438358ad398aa2175, type: 3}
+      propertyPath: minSpawnEnemyCnt
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

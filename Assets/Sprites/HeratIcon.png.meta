@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      HeratIcon_0: -6619507793336538536
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

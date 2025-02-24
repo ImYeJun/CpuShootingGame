@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      LeftTiltedTurtle_0: 8080862094774509082
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

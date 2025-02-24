@@ -109,6 +109,40 @@ MonoBehaviour:
   bulletPrefab: {fileID: 4334633940143069426, guid: 2cf1e693a48977e4b9647e4334ffcd03, type: 3}
   coolTimeAfterSpawn: 0
   shootIntervalTime: 1
+  rotateTime: 0.2
+  convolution:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.46072593
+      value: 0.19640353
+      inSlope: 0.3805521
+      outSlope: 0.3805521
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.08549566
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!50 &6487343355075488502
 Rigidbody2D:
   serializedVersion: 5

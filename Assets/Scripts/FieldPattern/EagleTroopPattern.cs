@@ -36,7 +36,8 @@ public class EagleTroopPattern : FieldPattern
 
             do{
                 xSpawnPositionIndex = Random.Range(0, xSpawnPosition.Count);
-                ySpawnPositionIndex = Random.Range(0, ySpawnPosition.Count);
+                ySpawnPositionIndex = Random.Range(0, ySpawnPosition.Count - 1); 
+                // ! The y rows were 3, but changed temporarily should be refactored
 
                 bool spawnPosition = spawnChecker[xSpawnPositionIndex][ySpawnPositionIndex];
 

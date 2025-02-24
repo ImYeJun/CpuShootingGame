@@ -22,8 +22,7 @@ public class PlayerInfoSendButton : MonoBehaviour
         {
             Debug.Log($"Score : {ScoreManager.Instance.Score}");
             Debug.Log($"Input Id : {playerId}");
-            SendJsonData("https://example.com/api/receive", new UserData { userId = playerId, score = ScoreManager.Instance.Score});
-            
+            SendJsonData("https://api.jbnucpu.co.kr/event", new UserData { userId = playerId, score = ScoreManager.Instance.Score});
             retryButton.SetActive(true);
             gameObject.transform.parent.gameObject.SetActive(false);
         }

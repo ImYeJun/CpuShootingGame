@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -8,6 +9,13 @@ public class PlayerInfoSendButton : MonoBehaviour
     [SerializeField] TextMeshProUGUI playerIdInputField;
     [SerializeField] TextMeshProUGUI invalidInputGuideText;
     [SerializeField] GameObject retryButton;
+    private List<UserData> userData;
+    
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.Space)){
+            GetRequest("https://api.jbnucpu.co.kr/event");
+        }
+    }
 
     public void Onclick()
     {
@@ -42,12 +50,6 @@ public class PlayerInfoSendButton : MonoBehaviour
         return true; 
     }
 
-    public class UserData
-    {
-        public string userId;
-        public int score;
-    }
-
     public void SendJsonData(string url, UserData data)
     {
         string json = JsonUtility.ToJson(data);
@@ -73,4 +75,48 @@ public class PlayerInfoSendButton : MonoBehaviour
             Debug.LogError("Error: " + request.error);
         }
     }
+
+    public void GetRequest(string url)
+    {
+        StartCoroutine(SendGetRequest(url));
+    }
+
+    private IEnumerator SendGetRequest(string url)
+    {
+        using (UnityWebRequest request = UnityWebRequest.Get(url))
+        {
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                Debug.Log("Response: " + request.downloadHandler.text);
+                
+                // Deserialize into a wrapper object
+                // UserDataList userDataList = JsonUtility.FromJson<UserDataList>(request.downloadHandler.text, );
+
+                // if (userDataList != null && userDataList.users.Count > 0)
+                // {
+                //     userData = JsonUtility.FromJson<UserDataList>(request.downloadHandler.text).users;
+
+                //     Debug.Log(userData[0].userId);
+                // }
+            }
+            else
+            {
+                Debug.LogError("Error: " + request.error);
+            }
+        }
+    }
 }
+
+public class UserData
+{
+    public string userId;
+    public int score;
+}
+
+// [System.Serializable]
+// public class UserDataList
+// {
+//     public List<UserData> users;
+// }

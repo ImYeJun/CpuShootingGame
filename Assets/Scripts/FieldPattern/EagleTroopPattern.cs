@@ -7,8 +7,12 @@ public class EagleTroopPattern : FieldPattern
     [SerializeField] private float topSpawnGap;
     [SerializeField] private float bottomSpawnGap;
     [SerializeField] private float enemyAreaRadius;
-    public override IEnumerator ExecutePattern(int wave = 1)
+    private int levelUpWaveUnit = 5;
+
+    public override IEnumerator ExecutePattern(int wave = -1)
     {
+        List<GameObject> enemies = new List<GameObject>();
+
         Debug.Log("EagleTroopPattern Exectued");
     
         int spawnEnemyCnt = Random.Range(minSpawnEnemyCnt, maxSpawnEnemyCnt);
@@ -50,10 +54,15 @@ public class EagleTroopPattern : FieldPattern
 
         for (int i = 0; i <spawnEnemyCnt; i++){
             GameObject spawnEnemy = Instantiate(enemyPrefab, spawnPoints[i], Quaternion.identity);
+            enemies.Add(spawnEnemy);
         }
 
-        yield return new WaitForSeconds(coolTimeAfterExecuted);
+        yield return StartCoroutine(WaitNextPattern(enemies));
 
         Debug.Log("EagleTroopPattern Ended");
+    }
+    protected override void CalculateActualWaveVariable(int wave)
+    {
+        throw new System.NotImplementedException();
     }
 }

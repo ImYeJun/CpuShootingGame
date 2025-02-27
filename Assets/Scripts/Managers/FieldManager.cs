@@ -9,6 +9,7 @@ public class FieldManager : MonoBehaviour
     [SerializeField] private int wave;
     [SerializeField] private List<FieldPattern> fieldPatterns; 
     private int earlyPatternIndex;
+    
     private void Awake()
     {
         if (Instance == null)
@@ -50,7 +51,7 @@ public class FieldManager : MonoBehaviour
             int randomIndex = Random.Range(0, fieldPatterns.Count);
             fieldPattern = fieldPatterns[randomIndex];
 
-            yield return StartCoroutine(fieldPattern.ExecutePattern());
+            yield return StartCoroutine(fieldPattern.ExecutePattern(wave));
         }
 
         
@@ -61,8 +62,6 @@ public class FieldManager : MonoBehaviour
         StopAllCoroutines();
         wave = 0;
     }
-
-    
 }
 
 public enum PatternType{

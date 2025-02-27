@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      EagleClaw_0: 5899232390297631247
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

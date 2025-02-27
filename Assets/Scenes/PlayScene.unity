@@ -2404,17 +2404,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1219768771}
   m_CullTransparentMesh: 1
---- !u!114 &1223762480 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4313351572363325828, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
-  m_PrefabInstance: {fileID: 6181500694710181261}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c6015f679e05a347b0f28bafdcb6281, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1241378678
 GameObject:
   m_ObjectHideFlags: 0
@@ -2712,7 +2701,7 @@ Transform:
   m_GameObject: {fileID: 1544900988}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.13, y: -9.66, z: 0}
+  m_LocalPosition: {x: 0.13, y: -50, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3730,7 +3719,7 @@ PrefabInstance:
       objectReference: {fileID: 5929508638740212341, guid: 038b6540f5ae41446ae04286773966d7, type: 3}
     - target: {fileID: 1669380452930316462, guid: a385faa541be393479377732b7a53ed5, type: 3}
       propertyPath: fieldPatterns.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1669380452930316462, guid: a385faa541be393479377732b7a53ed5, type: 3}
       propertyPath: spawnLinePoint.Array.size
@@ -3739,7 +3728,7 @@ PrefabInstance:
     - target: {fileID: 1669380452930316462, guid: a385faa541be393479377732b7a53ed5, type: 3}
       propertyPath: 'fieldPatterns.Array.data[0]'
       value: 
-      objectReference: {fileID: 1223762480}
+      objectReference: {fileID: 1887686828}
     - target: {fileID: 1669380452930316462, guid: a385faa541be393479377732b7a53ed5, type: 3}
       propertyPath: 'fieldPatterns.Array.data[1]'
       value: 
@@ -3890,15 +3879,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8799226257881493995, guid: c58903ad2b18ec6438358ad398aa2175, type: 3}
       propertyPath: maxSpawnEnemyCnt
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8799226257881493995, guid: c58903ad2b18ec6438358ad398aa2175, type: 3}
       propertyPath: minSpawnEnemyCnt
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8799226257881493995, guid: c58903ad2b18ec6438358ad398aa2175, type: 3}
+      propertyPath: coolTimeAfterClear
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799226257881493995, guid: c58903ad2b18ec6438358ad398aa2175, type: 3}
       propertyPath: coolTimeAfterExecuted
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4113,11 +4106,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4313351572363325828, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: maxSpawnEnemyCnt
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4313351572363325828, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: minSpawnEnemyCnt
-      value: 8
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4313351572363325828, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: coolTimeAfterClear
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4313351572363325828, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: coolTimeAfterExecuted
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4642511603111832483, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: m_Name
@@ -4142,6 +4143,14 @@ PrefabInstance:
     - target: {fileID: 6593437660196359058, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: isDrawingActivate
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6593437660196359058, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: coolTimeAfterClear
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6593437660196359058, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: coolTimeAfterExecuted
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6593437660196359058, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: corretionToPlayerPoint

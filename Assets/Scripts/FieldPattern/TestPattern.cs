@@ -5,11 +5,15 @@ using UnityEngine;
 
 public class TestPattern : FieldPattern
 {
-    public override IEnumerator ExecutePattern(int wave = 1)
-    {
+    public AnimationCurve animationCurve;
+
+    public override IEnumerator ExecutePattern(int wave = -1)
+    {   
+        List<GameObject> enemies = new List<GameObject>();
+        CalculateActualWaveVariable(wave);
         Debug.Log("TestPattern Executed");
 
-        int spawnEnemyCnt = Random.Range(minSpawnEnemyCnt, maxSpawnEnemyCnt);
+        int spawnEnemyCnt = Random.Range(actualMinSpawnEnemyCnt, actualMaxSpawnEnemyCnt);
 
         float minSpawnPositionX = cameraTopLeftCoord.x + 0.3f;
         float maxSpawnPositionX = cameraBottomRightCoord.x - 0.3f;
@@ -58,10 +62,23 @@ public class TestPattern : FieldPattern
             }
         }
 
-        yield return new WaitForSeconds(CoolTimeAfterExecuted);
-
-        Debug.Log($"Activated Enemy Count : {enemies.Count(g => g != null && g.activeSelf)}");
+        yield return StartCoroutine(WaitNextPattern(enemies));
 
         Debug.Log("TestPattern Ended");
+    }
+
+    protected override void CalculateActualWaveVariable(int wave)
+    {
+        actualCoolTimeAfterClear = coolTimeAfterClear;
+        actualCoolTimeAfterExectued = coolTimeAfterExecuted;
+        actualMaxSpawnEnemyCnt = maxSpawnEnemyCnt;
+        actualMinSpawnEnemyCnt = minSpawnEnemyCnt;
+
+        if (wave == -1){
+            return;
+        }
+
+        actualMinSpawnEnemyCnt = minSpawnEnemyCnt * (int)animationCurve.Evaluate(wave);
+        actualMaxSpawnEnemyCnt = maxSpawnEnemyCnt * (int)animationCurve.Evaluate(wave);
     }
 }

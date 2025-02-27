@@ -46,8 +46,10 @@ public class HomingBulletPattern : FieldPattern
     }
 
     // TODO : Fix but that each HomingBulletPattern's spawnChecker is not sharedy
-    public override IEnumerator ExecutePattern(int wave = 1)
+    public override IEnumerator ExecutePattern(int wave = -1)
     {
+        List<GameObject> enemies = new List<GameObject>();
+
         Debug.Log("HomingBulletPattern Exectued");
     
         int spawnEnemyCnt = Random.Range(minSpawnEnemyCnt, maxSpawnEnemyCnt);
@@ -55,11 +57,17 @@ public class HomingBulletPattern : FieldPattern
 
         for (int i = 0; i < spawnEnemyCnt; i++){
             GameObject spawnEnemy = Instantiate(enemyPrefab, spawnPoints[i], Quaternion.identity);
+            enemies.Add(spawnEnemy);
         }
         
-        yield return new WaitForSeconds(coolTimeAfterExecuted);
+        yield return WaitNextPattern(enemies);
 
         Debug.Log("HomingBulletPattern Ended");
+    }
+
+    protected override void CalculateActualWaveVariable(int wave)
+    {
+        throw new System.NotImplementedException();
     }
 
     // * This code is kinda resource taking. Maybe need to be refactored?

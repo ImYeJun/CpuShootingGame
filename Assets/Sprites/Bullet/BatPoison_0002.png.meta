@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 7b0bb590fe2cbb642a32180753da5a0b
+guid: 076dd96c5de4ddc47bebf92c2a9ac546
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6577417480080399234
-    second: TextField_0
+      213: -2446911897417189558
+    second: BatPoison_0002_0
+  - first:
+      213: -7346829917369595417
+    second: BatPoison_0002_1
+  - first:
+      213: -5854072243154643445
+    second: BatPoison_0002_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,30 +128,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TextField_0
+      name: BatPoison_0002_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 525
-        height: 94
+        x: 7
+        y: 7
+        width: 50
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +147,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 28b13a7795ea74b50800000000000000
-      internalID: 6577417480080399234
+      spriteID: a4775c5f792da0ed0800000000000000
+      internalID: -2446911897417189558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BatPoison_0002_1
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 7
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e909f58d11da0a90800000000000000
+      internalID: -7346829917369595417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BatPoison_0002_2
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 5
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b061b41af4822cea0800000000000000
+      internalID: -5854072243154643445
       vertices: []
       indices: 
       edges: []

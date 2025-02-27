@@ -34,7 +34,7 @@ public class PlayerInfoSendButton : MonoBehaviour
             Debug.Log($"Score : {ScoreManager.Instance.Score}");
             Debug.Log($"Input Id : {playerId}");
             Debug.Log($"Input NickName : {playerNickName}");
-            SendJsonData("https://api.jbnucpu.co.kr/event", new UserData { userId = playerId, score = ScoreManager.Instance.Score});
+            SendJsonData("https://api.jbnucpu.co.kr/event", new UserData { userId = playerId, nickName = playerNickName,score = ScoreManager.Instance.Score});
             retryButton.SetActive(true);
             gameObject.transform.parent.gameObject.SetActive(false);
         }
@@ -116,6 +116,7 @@ public class PlayerInfoSendButton : MonoBehaviour
 public class UserData
 {
     public string userId;
+    public string nickName;
     public int score;
 }
 

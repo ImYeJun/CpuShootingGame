@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fa3463a38c6f0a4aa4e996e3562c7b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
+  health: 4
   killScore: 100
   enemyName: TestingEnemy
   sorting: 

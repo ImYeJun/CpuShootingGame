@@ -4,13 +4,17 @@ using System.Linq;
 using UnityEngine;
 
 public class HomingBulletPattern : FieldPattern
-{
+{    
+    [Space(10)]
+    [Header("HomingBulletPattern Field")]
     [SerializeField] bool isDrawingActivate;
     private LineRenderer lineRenderer;
     private List<Vector3> pathPoints;  // Store the path points
     private Vector3 drawPoint;
     [SerializeField] float drawTime;
     [SerializeField] private float bottomSpawnCoordCorrectionValue;
+    [SerializeField] private float topSpawnCoordCorrectionValue;
+    [SerializeField] private float sideSpawnCoordCorrectionValue;
     [SerializeField] private List<GameObject> spawnLinePoint;
     [SerializeField] private int corretionToPlayerPoint;
     [SerializeField] private float enemyAreaRadius;
@@ -45,7 +49,6 @@ public class HomingBulletPattern : FieldPattern
 
     }
 
-    // TODO : Fix but that each HomingBulletPattern's spawnChecker is not sharedy
     public override IEnumerator ExecutePattern(int wave = -1)
     {
         List<GameObject> enemies = new List<GameObject>();
@@ -95,8 +98,8 @@ public class HomingBulletPattern : FieldPattern
         Vector3 spawnPoint = new Vector3();
         
         for (int i = 0; i < spawnLinePointCoords.Count; i++){
-            float x = Random.Range(cameraTopLeftCoord.x ,cameraTopRightCoord.x);
-            float y = Random.Range(cameraBottomLeftCoord.y + bottomSpawnCoordCorrectionValue,cameraTopLeftCoord.y);
+            float x = Random.Range(cameraTopLeftCoord.x,cameraTopRightCoord.x);
+            float y = Random.Range(cameraBottomLeftCoord.y,cameraTopLeftCoord.y);
             
             Vector3 pointCoord = new Vector3(x, y, 0);
             spawnLinePointCoords[i] = pointCoord;
@@ -154,8 +157,8 @@ public class HomingBulletPattern : FieldPattern
                 float yCorrectionValue = GetyCorrectionValue(t);
 
                 spawnPoint = new Vector3(
-                    Mathf.Clamp(spawnPoint.x + xCorrectionValue, cameraBottomLeftCoord.x + 0.3f, cameraBottomRightCoord.x - 0.3f),
-                    Mathf.Clamp(spawnPoint.y + yCorrectionValue, cameraBottomLeftCoord.y + bottomSpawnCoordCorrectionValue, cameraTopLeftCoord.y - 0.3f),
+                    Mathf.Clamp(spawnPoint.x + xCorrectionValue, cameraBottomLeftCoord.x + sideSpawnCoordCorrectionValue, cameraBottomRightCoord.x - sideSpawnCoordCorrectionValue),
+                    Mathf.Clamp(spawnPoint.y + yCorrectionValue, cameraBottomLeftCoord.y + bottomSpawnCoordCorrectionValue, cameraTopLeftCoord.y - topSpawnCoordCorrectionValue),
                     spawnPoint.z
                 );
                 

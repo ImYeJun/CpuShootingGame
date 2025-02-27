@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 public class TestPattern : FieldPattern
 {
-    public AnimationCurve animationCurve;
-
+    [Space(10)]
+    [Header("TestPattern Field")]
+    [SerializeField] private float enemyAreaRadius;
+    [Header("WaveDifficultyPoint")]
+    public List<WaveDifficultyPoint> min;
+    public List<WaveDifficultyPoint> max;
     public override IEnumerator ExecutePattern(int wave = -1)
     {   
         List<GameObject> enemies = new List<GameObject>();
@@ -21,7 +26,6 @@ public class TestPattern : FieldPattern
         float minSpawnPositionY = cameraTopLeftCoord.y + 1.0f;
         float maxSpawnPositionY = cameraTopLeftCoord.y + 4.0f;
 
-        float enemySize = 0.1f;
         List<Vector3> occupiedPositions = new List<Vector3>();
 
         for (int i = 0; i < spawnEnemyCnt; i++)
@@ -40,7 +44,7 @@ public class TestPattern : FieldPattern
                 positionFound = true;
                 foreach (var pos in occupiedPositions)
                 {
-                    if (Vector3.Distance(pos, spawnPosition) < enemySize)
+                    if (Vector3.Distance(pos, spawnPosition) < enemyAreaRadius)
                     {
                         positionFound = false;
                         break;
@@ -48,7 +52,7 @@ public class TestPattern : FieldPattern
                 }
 
                 attempts++;
-            } while (!positionFound && attempts < 10); // Prevent infinite loops
+            } while (!positionFound && attempts < 20); // Prevent infinite loops
 
             if (positionFound)
             {
@@ -67,18 +71,43 @@ public class TestPattern : FieldPattern
         Debug.Log("TestPattern Ended");
     }
 
+    private void Start() {
+        SetDifficultyGraph();
+    }
+
+    [ContextMenu("SetDifficultyGraph")]
+    public void SetDifficultyGraph(){
+        minEnemySpawnCntGraph.keys = new Keyframe[0];
+        maxEnemySpawnCntGraph.keys = new Keyframe[0];
+
+        foreach(WaveDifficultyPoint point in min){
+            minEnemySpawnCntGraph.AddKey(point.wave, point.value);
+        }
+
+        for (int i = 0; i < minEnemySpawnCntGraph.keys.Length; i++){
+            AnimationUtility.SetKeyLeftTangentMode(minEnemySpawnCntGraph, i , AnimationUtility.TangentMode.Constant);
+            AnimationUtility.SetKeyRightTangentMode(minEnemySpawnCntGraph, i , AnimationUtility.TangentMode.Constant);
+        }
+
+        foreach(WaveDifficultyPoint point in max){
+            maxEnemySpawnCntGraph.AddKey(point.wave, point.value);
+        }
+
+        for (int i = 0; i < maxEnemySpawnCntGraph.keys.Length; i++){
+            AnimationUtility.SetKeyLeftTangentMode(maxEnemySpawnCntGraph, i , AnimationUtility.TangentMode.Constant);
+            AnimationUtility.SetKeyRightTangentMode(maxEnemySpawnCntGraph, i , AnimationUtility.TangentMode.Constant);
+        }
+    }
+
+
     protected override void CalculateActualWaveVariable(int wave)
     {
-        actualCoolTimeAfterClear = coolTimeAfterClear;
-        actualCoolTimeAfterExectued = coolTimeAfterExecuted;
-        actualMaxSpawnEnemyCnt = maxSpawnEnemyCnt;
-        actualMinSpawnEnemyCnt = minSpawnEnemyCnt;
-
         if (wave == -1){
             return;
         }
 
-        actualMinSpawnEnemyCnt = minSpawnEnemyCnt * (int)animationCurve.Evaluate(wave);
-        actualMaxSpawnEnemyCnt = maxSpawnEnemyCnt * (int)animationCurve.Evaluate(wave);
+        actualMinSpawnEnemyCnt = (int)minEnemySpawnCntGraph.Evaluate(wave);
+        actualMaxSpawnEnemyCnt = (int)maxEnemySpawnCntGraph.Evaluate(wave);
     }
 }
+

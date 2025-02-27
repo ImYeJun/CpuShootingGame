@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class EagleTroopPattern : FieldPattern
 {
+    [Space(10)]
+    [Header("EagleTroopPattern Field")]
     [SerializeField] private float topSpawnGap;
     [SerializeField] private float bottomSpawnGap;
     [SerializeField] private float enemyAreaRadius;
     private int levelUpWaveUnit = 5;
-
+    
     public override IEnumerator ExecutePattern(int wave = -1)
     {
         List<GameObject> enemies = new List<GameObject>();

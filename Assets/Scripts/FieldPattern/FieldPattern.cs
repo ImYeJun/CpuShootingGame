@@ -1,29 +1,42 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 abstract public class FieldPattern : MonoBehaviour
 {
+    [Header("Pattern Common Field")]
     [SerializeField] protected GameObject enemyPrefab;
     
+    [Header("Difficulty Field")]
+    [Space(5)]
     [SerializeField] protected float coolTimeAfterExecuted;
     public float CoolTimeAfterExecuted => coolTimeAfterExecuted;
-    protected float actualCoolTimeAfterExectued;
+    [SerializeField]protected float actualCoolTimeAfterExectued;
 
+    [Space(5)]
     [SerializeField] protected float coolTimeAfterClear;
     public float CoolTimeAfterClear => coolTimeAfterClear;
-    protected float actualCoolTimeAfterClear;
+    [SerializeField]protected float actualCoolTimeAfterClear;
 
     // protected List<List<GameObject>> allWaveEnemies = new List<List<GameObject>>();
 
+    [Space(5)]
     [SerializeField] protected int minSpawnEnemyCnt;
     public int MinSpawnEnemyCnt => minSpawnEnemyCnt;
-    protected int actualMinSpawnEnemyCnt;
-
+    [SerializeField]protected int actualMinSpawnEnemyCnt;
+    
+    [Space(5)]
     [SerializeField] protected int maxSpawnEnemyCnt;
     public int MaxSpawnEnemyCnt => maxSpawnEnemyCnt;
-    protected int actualMaxSpawnEnemyCnt;
+    [SerializeField]protected int actualMaxSpawnEnemyCnt;
+
+    [Space(7)]
+    [Header("Difficulty Graph")]
+    [SerializeField] protected AnimationCurve minEnemySpawnCntGraph;
+    [SerializeField] protected AnimationCurve maxEnemySpawnCntGraph;
 
     //* -1 means that the executed wave number is under earlyPatternIndex.
     public abstract IEnumerator ExecutePattern(int wave = -1);
@@ -36,10 +49,16 @@ abstract public class FieldPattern : MonoBehaviour
     protected Vector3 cameraBottomLeftCoord;
 
     virtual protected void Awake() {
+        actualCoolTimeAfterClear = coolTimeAfterClear;
+        actualCoolTimeAfterExectued = coolTimeAfterExecuted;
+        actualMaxSpawnEnemyCnt = maxSpawnEnemyCnt;
+        actualMinSpawnEnemyCnt = minSpawnEnemyCnt;
+
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
 
         GetCameraEdgeCoordinate();
     }
+
 
     private void GetCameraEdgeCoordinate(){
             // Get the orthographic size and aspect ratio of the camera
@@ -65,7 +84,6 @@ abstract public class FieldPattern : MonoBehaviour
             elapsedTime = Time.time - startTime;
 
             int activatedEnemyCnt = enemies.Count(e => e != null);
-            Debug.Log($"Current Enemy Cnt : {activatedEnemyCnt}");
 
             if (activatedEnemyCnt <= 0){
                 Debug.Log("All Enemies are Dead!");
@@ -77,4 +95,11 @@ abstract public class FieldPattern : MonoBehaviour
             yield return null;
         }
     }
+}
+
+//! Add this logic to Blueprint
+[Serializable]
+public struct WaveDifficultyPoint{
+    public int wave;
+    public int value;
 }

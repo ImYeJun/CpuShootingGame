@@ -3,7 +3,6 @@ using UnityEditor.Analytics;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(PolygonCollider2D))]
 public abstract class Enemy : MonoBehaviour
 {
     [SerializeField] protected int health;
@@ -59,8 +58,6 @@ public abstract class Enemy : MonoBehaviour
         }
     }
 
-
-    // TODO : When Enemy is hit by PlayerBullet, its color gets red and soon returns to its origin color
     public IEnumerator ExecuteHitEffect()
     {
         spriteRenderer.color = new Color(0.8f, 0.0f, 0.0f);
@@ -71,7 +68,7 @@ public abstract class Enemy : MonoBehaviour
 
         yield return new WaitForSeconds(minHitEffectTime);
 
-        isHit = false;  // 여기에서 false로 변경
+        isHit = false;
 
         spriteRenderer.color = originColor;
     }

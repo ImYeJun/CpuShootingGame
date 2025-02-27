@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class TestingEnemy : Mob
 {
-    [SerializeField] private int speed;
+    [SerializeField] private float speed;
 
     override protected void Awake()
     {
@@ -17,7 +17,7 @@ public class TestingEnemy : Mob
     public override void OnDeath()
     {
         Debug.Log("TestingEnemy is Dead");
-        // CancelInvoke(nameof(ShootBullet)); // Stop shooting when the enemy dies
+        SoundEffectManager.Instance.PlayWithRandomPitch(SoundEffectType.SeagullDead);
         base.OnDeath();
     }
 }

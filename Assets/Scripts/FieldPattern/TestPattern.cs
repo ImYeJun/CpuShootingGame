@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class TestPattern : FieldPattern
@@ -48,6 +49,7 @@ public class TestPattern : FieldPattern
             if (positionFound)
             {
                 GameObject spawnedEnemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+                enemies.Add(spawnedEnemy);
                 occupiedPositions.Add(spawnPosition);
             }
             else
@@ -57,6 +59,8 @@ public class TestPattern : FieldPattern
         }
 
         yield return new WaitForSeconds(CoolTimeAfterExecuted);
+
+        Debug.Log($"Activated Enemy Count : {enemies.Count(g => g != null && g.activeSelf)}");
 
         Debug.Log("TestPattern Ended");
     }

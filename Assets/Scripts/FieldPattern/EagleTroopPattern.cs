@@ -4,56 +4,52 @@ using UnityEngine;
 
 public class EagleTroopPattern : FieldPattern
 {
-    // TODO : Fix bug that Spawned Enemies are sometimes overlapped
-    // TODO : Fix but that each HomingBulletPattern's spawnChecker is not shared
+    [SerializeField] private float topSpawnGap;
+    [SerializeField] private float bottomSpawnGap;
+    [SerializeField] private float enemyAreaRadius;
     public override IEnumerator ExecutePattern(int wave = 1)
     {
         Debug.Log("EagleTroopPattern Exectued");
     
         int spawnEnemyCnt = Random.Range(minSpawnEnemyCnt, maxSpawnEnemyCnt);
-
-        float minSpawnPositionX = cameraTopLeftCoord.x + 0.8f;
-        float maxSpawnPositionX = cameraTopRightCoord.x - 0.8f;
-        float middleSpawnPositionX = (minSpawnPositionX + maxSpawnPositionX);
-        List<float> xSpawnPosition = new List<float> {minSpawnPositionX, middleSpawnPositionX, maxSpawnPositionX};
-        
-        float minSpawnPositionY = cameraTopLeftCoord.y - 1.4f;
-        float maxSpawnPositionY = cameraTopLeftCoord.y - 4.0f;
-        float middleSpawnPositionY = (minSpawnPositionY + maxSpawnPositionY);
-        List<float> ySpawnPosition = new List<float> {minSpawnPositionY, middleSpawnPositionY, maxSpawnPositionY};
-
-        List<List<bool>> spawnChecker = new List<List<bool>>
-        {
-            new List<bool> { false, false, false },
-            new List<bool> { false, false, false },
-            new List<bool> { false, false, false }
-        };
+        List<Vector3> spawnPoints = new List<Vector3>();
+        int maxSpawnTrial = 20;
 
         for (int i = 0; i < spawnEnemyCnt; i++){
-            bool positionFound = false;
-            int xSpawnPositionIndex = -1;
-            int ySpawnPositionIndex = -1;
+            bool isPositionFound = true;
+            Vector3 spawnPos = new Vector3();
+            int spawnTrial = 0;
 
             do{
-                xSpawnPositionIndex = Random.Range(0, xSpawnPosition.Count);
-                ySpawnPositionIndex = Random.Range(0, ySpawnPosition.Count - 1); 
-                // ! The y rows were 3, but changed temporarily should be refactored
+                isPositionFound = true;
 
-                bool spawnPosition = spawnChecker[xSpawnPositionIndex][ySpawnPositionIndex];
+                float spawnX = Random.Range(cameraBottomLeftCoord.x + 0.5f, cameraBottomRightCoord.x - 0.5f);
+                float spawnY = Random.Range(cameraTopLeftCoord.y - topSpawnGap, cameraBottomLeftCoord.y + bottomSpawnGap);
+                
+                spawnPos = new Vector3(spawnX, spawnY , 0);
 
-                if (spawnPosition != false){
-                    spawnChecker[xSpawnPositionIndex][ySpawnPositionIndex] = true;
-                    positionFound = true;
+                if (spawnTrial >= maxSpawnTrial){
+                    Debug.Log("Eagle Spawn Max Trial Exceeded");
+                    break;
                 }
-            }while(positionFound);
 
-            Vector3 spawnPositionCoordinate = new Vector3(
-                xSpawnPosition[xSpawnPositionIndex],
-                ySpawnPosition[ySpawnPositionIndex],
-                0
-                );
-            
-            GameObject spawnEnemy = Instantiate(enemyPrefab, spawnPositionCoordinate, Quaternion.identity);
+                foreach(Vector3 pos in spawnPoints){
+                    float distance = Vector3.Distance(spawnPos, pos);
+
+                    if (distance < enemyAreaRadius){
+                        isPositionFound = false;
+                        break;
+                    }
+                }
+
+                spawnTrial++;
+            }while(!isPositionFound);
+
+            spawnPoints.Add(spawnPos);
+        }
+
+        for (int i = 0; i <spawnEnemyCnt; i++){
+            GameObject spawnEnemy = Instantiate(enemyPrefab, spawnPoints[i], Quaternion.identity);
         }
 
         yield return new WaitForSeconds(coolTimeAfterExecuted);

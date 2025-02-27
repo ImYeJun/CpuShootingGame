@@ -69,6 +69,9 @@ public class PlayerHealthManager : MonoBehaviour
     {
         isInvincible = true;
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        Color initialColor = spriteRenderer.color;
+        bool isTransparernt = false;
+
 
         float blinkInterval = 0.4f; // Adjust this value for faster or slower blinking
         float elapsedTime = 0f;
@@ -78,9 +81,15 @@ public class PlayerHealthManager : MonoBehaviour
         while (elapsedTime < invincibilityTime)
         {
             // Toggle between visible and semi-transparent
-            Color color = spriteRenderer.color;
-            color.a = (color.a == 1.0f) ? 0.3f : 1.0f;
-            color.r = 255.0f;
+            Color color = new Color();
+
+            color.a = isTransparernt ? 1.0f : 0.8f;
+            isTransparernt = !isTransparernt;
+
+            color.r = 255.0f / 255.0f;
+            color.g = 129.0f / 255.0f;
+            color.b = 129.0f / 255.0f;
+
             spriteRenderer.color = color;
 
             yield return new WaitForSeconds(blinkInterval);
@@ -89,9 +98,6 @@ public class PlayerHealthManager : MonoBehaviour
 
         // Restore original state
         isInvincible = false;
-        Color finalColor = spriteRenderer.color;
-        finalColor.a = 1.0f;
-        finalColor.r = 0.0f;
-        spriteRenderer.color = finalColor;
+        spriteRenderer.color = initialColor;
     }
 }

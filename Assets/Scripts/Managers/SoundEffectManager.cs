@@ -42,5 +42,9 @@ public class SoundEffectManager : MonoBehaviour
 
 public enum SoundEffectType{
     EnemyHit,
-    PlayerHit
+    PlayerHit,
+    DefaultEnemyDead,
+    SeagullDead,
+    OtterDead,
+    EagleDead
 }

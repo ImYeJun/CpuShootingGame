@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3655536458183675282}
   - component: {fileID: 5929508638740212341}
   - component: {fileID: 6000972254098726823}
-  - component: {fileID: 2621868135719793747}
+  - component: {fileID: 745333271101765639}
   m_Layer: 0
   m_Name: TestingEnemy
   m_TagString: Enemy
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 13.9525, y: -1.0142, z: 0}
-  m_LocalScale: {x: 1.7, y: 1.7, z: 1.7}
+  m_LocalScale: {x: 0.49999997, y: 0.49999997, z: 0.49999997}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5800245352896720925, guid: 01a68c37df1b36d44a9b0a932fbbecf5, type: 3}
+  m_Sprite: {fileID: 2122978388491037405, guid: 12d5a748f5cda99439d981ca74f5afc0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,12 +102,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fa3463a38c6f0a4aa4e996e3562c7b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 30
+  health: 5
   killScore: 100
   enemyName: TestingEnemy
   sorting: 
   bulletPrefab: {fileID: 8710308031660851049, guid: 48e11d303cc40d84abf673b44f0a0707, type: 3}
-  speed: 2
+  speed: 2.7
 --- !u!50 &6000972254098726823
 Rigidbody2D:
   serializedVersion: 5
@@ -116,7 +116,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1920297314927383356}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -133,9 +133,9 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
---- !u!60 &2621868135719793747
+--- !u!60 &745333271101765639
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -173,7 +173,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.6, y: 0.57}
+    oldSize: {x: 1.7, y: 1.52}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -181,18 +181,46 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.19, y: 0.074999996}
-      - {x: -0.01, y: 0.21499999}
-      - {x: -0.04, y: 0.21499999}
-      - {x: -0.08, y: 0.16499999}
-      - {x: -0.22999999, y: 0.074999996}
-      - {x: -0.29999998, y: 0.044999998}
-      - {x: -0.29999998, y: -0.055}
-      - {x: -0.22, y: -0.13499999}
-      - {x: -0.06, y: -0.285}
-      - {x: 0.01, y: -0.285}
-      - {x: 0.03, y: -0.275}
-      - {x: 0.22, y: -0.13499999}
-      - {x: 0.26999998, y: -0.035}
-      - {x: 0.26999998, y: 0.055}
+    - - {x: 0.19999999, y: -0.19999999}
+      - {x: 0.28, y: -0.21}
+      - {x: 0.55, y: -0.14}
+      - {x: 0.7, y: -0.089999996}
+      - {x: 0.79999995, y: 0.02}
+      - {x: 0.82, y: 0.07}
+      - {x: 0.82, y: 0.19}
+      - {x: 0.78999996, y: 0.22999999}
+      - {x: 0.65999997, y: 0.22999999}
+      - {x: 0.53, y: 0.19999999}
+      - {x: 0.29999998, y: 0.14}
+      - {x: 0.28, y: 0.13}
+      - {x: 0.19999999, y: 0.11}
+      - {x: 0.21, y: 0.22}
+      - {x: 0.17, y: 0.35999998}
+      - {x: 0.11, y: 0.48999998}
+      - {x: 0.14999999, y: 0.56}
+      - {x: 0.17999999, y: 0.66999996}
+      - {x: 0.13, y: 0.71}
+      - {x: 0.08, y: 0.72999996}
+      - {x: -0.099999994, y: 0.72999996}
+      - {x: -0.19, y: 0.66999996}
+      - {x: -0.14999999, y: 0.56}
+      - {x: -0.11, y: 0.52}
+      - {x: -0.17, y: 0.34}
+      - {x: -0.19999999, y: 0.22}
+      - {x: -0.29, y: 0.14}
+      - {x: -0.65, y: 0.22999999}
+      - {x: -0.78, y: 0.22999999}
+      - {x: -0.82, y: 0.21}
+      - {x: -0.82, y: 0.01}
+      - {x: -0.7, y: -0.08}
+      - {x: -0.55, y: -0.14}
+      - {x: -0.21, y: -0.22999999}
+      - {x: -0.16, y: -0.29999998}
+      - {x: -0.19, y: -0.38}
+      - {x: -0.17, y: -0.51}
+      - {x: -0.07, y: -0.72999996}
+      - {x: 0.049999997, y: -0.72999996}
+      - {x: 0.049999997, y: -0.71999997}
+      - {x: 0.17, y: -0.48999998}
+      - {x: 0.17, y: -0.39}
   m_UseDelaunayMesh: 0

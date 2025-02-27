@@ -7,6 +7,7 @@ using UnityEngine.Networking;
 public class PlayerInfoSendButton : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI playerIdInputField;
+    [SerializeField] TextMeshProUGUI playerNickNameInputField;
     [SerializeField] TextMeshProUGUI invalidInputGuideText;
     [SerializeField] GameObject retryButton;
     private List<UserData> userData;
@@ -20,6 +21,8 @@ public class PlayerInfoSendButton : MonoBehaviour
     public void Onclick()
     {
         string playerId = playerIdInputField.text.Trim(); 
+        string playerNickName = playerNickNameInputField.text;
+
         if (playerId.Length > 0)
         {
             // * Something stupid character is attached as a last charaacter of playerId so has to be removed
@@ -30,6 +33,7 @@ public class PlayerInfoSendButton : MonoBehaviour
         {
             Debug.Log($"Score : {ScoreManager.Instance.Score}");
             Debug.Log($"Input Id : {playerId}");
+            Debug.Log($"Input NickName : {playerNickName}");
             SendJsonData("https://api.jbnucpu.co.kr/event", new UserData { userId = playerId, score = ScoreManager.Instance.Score});
             retryButton.SetActive(true);
             gameObject.transform.parent.gameObject.SetActive(false);

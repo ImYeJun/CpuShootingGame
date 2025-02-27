@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b509a5d2599fdf34a854ac4113534144
+guid: f77283569b77f18468a96b35228d217c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2207236230058056998
-    second: Player 1_0
+      213: 2353924888058270316
+    second: EagleTopdown_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player 1_0
+      name: EagleTopdown_0
       rect:
         serializedVersion: 2
-        x: 18
-        y: 9
-        width: 29
-        height: 45
+        x: 64
+        y: 4
+        width: 192
+        height: 312
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ad2640cd7525e51e0800000000000000
-      internalID: -2207236230058056998
+      spriteID: c621aacc632daa020800000000000000
+      internalID: 2353924888058270316
       vertices: []
       indices: 
       edges: []
@@ -173,8 +173,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Player 1_0: -2207236230058056998
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

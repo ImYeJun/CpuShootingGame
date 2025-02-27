@@ -3,8 +3,8 @@ guid: 274dd285526667642b052ed20b8c18c0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1032333192923727736
-    second: untitled (1)_0
+      213: -1787278146798827293
+    second: DeadTitlePlayer_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -110,6 +110,19 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
     buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -126,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: untitled (1)_0
+      name: DeadTitlePlayer_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 23
-        width: 111
-        height: 82
+        x: 59
+        y: 189
+        width: 542
+        height: 252
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 888bfe93e6a6ca1f0800000000000000
-      internalID: -1032333192923727736
+      spriteID: 3e8cc31beff4237e0800000000000000
+      internalID: -1787278146798827293
       vertices: []
       indices: 
       edges: []
@@ -160,8 +173,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      untitled (1)_0: -1032333192923727736
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

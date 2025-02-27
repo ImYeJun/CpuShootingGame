@@ -7,11 +7,13 @@ public class HomingBulletShooter : Mob
     [SerializeField] private float shootIntervalTime;
     [SerializeField] private float rotateTime;
     [SerializeField] private AnimationCurve convolution;
+    [SerializeField] private float blinkIntervalTime;
     protected override void Awake()
     {
         base.Awake();
 
-        InvokeRepeating(nameof(ShootBullet), coolTimeAfterSpawn, shootIntervalTime);
+        StartCoroutine(nameof(ExecuteBlinkingEffect));
+        // InvokeRepeating(nameof(ShootBullet), coolTimeAfterSpawn, shootIntervalTime);
     }
 
     public override void ShootBullet()
@@ -59,7 +61,36 @@ public class HomingBulletShooter : Mob
     public override void OnDeath()
     {
         Debug.Log("Homing Bullet Shooter is Dead");
-        // CancelInvoke(nameof(ShootBullet));
+        SoundEffectManager.Instance.PlayWithRandomPitch(SoundEffectType.OtterDead);
         base.OnDeath();
+    }
+
+    private IEnumerator ExecuteBlinkingEffect(){
+        Color originColor = spriteRenderer.color;
+        Color lowAlphaColor = originColor;
+        Color highAlphaColor = originColor;
+
+        rb.simulated = false;
+
+        Quaternion rotateAngle = Quaternion.Euler(0,0, -90);
+        transform.rotation = rotateAngle;
+
+        lowAlphaColor.a = 0.5f;
+        highAlphaColor.a = 0.8f;
+
+        for (int i = 0; i < 3; i++){
+            spriteRenderer.color = lowAlphaColor;
+
+            yield return new WaitForSeconds(blinkIntervalTime);
+
+            spriteRenderer.color = highAlphaColor;
+            
+            yield return new WaitForSeconds(blinkIntervalTime);
+        }
+
+        spriteRenderer.color = originColor;
+        rb.simulated = true;
+
+        InvokeRepeating(nameof(ShootBullet), coolTimeAfterSpawn, shootIntervalTime);
     }
 }

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ddbf5ac60115928469d485dcbc9861b5
+guid: 7b0bb590fe2cbb642a32180753da5a0b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8080862094774509082
-    second: LeftTiltedTurtle_0
+      213: 6577417480080399234
+    second: TextField_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LeftTiltedTurtle_0
+      name: TextField_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 10
-        width: 30
-        height: 44
+        x: 0
+        y: 0
+        width: 525
+        height: 94
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a1e14fdc24df42070800000000000000
-      internalID: 8080862094774509082
+      spriteID: 28b13a7795ea74b50800000000000000
+      internalID: 6577417480080399234
       vertices: []
       indices: 
       edges: []
@@ -173,8 +173,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      LeftTiltedTurtle_0: 8080862094774509082
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

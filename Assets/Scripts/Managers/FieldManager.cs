@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FieldManager : MonoBehaviour
 {
     public static FieldManager Instance { get; private set; }
-
     [SerializeField] private int wave;
     [SerializeField] private List<FieldPattern> fieldPatterns; 
+    private int earlyPatternIndex;
     private void Awake()
     {
         if (Instance == null)
@@ -22,17 +23,36 @@ public class FieldManager : MonoBehaviour
     }
 
     private void Start() {
+        earlyPatternIndex = 0;
+
         StartCoroutine(StartWave());
     }
 
     public IEnumerator StartWave()
     {
-        Debug.Log("New Wave Started!");
         wave++;
+        Debug.Log("New Wave Started!");
+        FieldPattern fieldPattern;
 
-        int randomIndex = Random.Range(0, fieldPatterns.Count);
-        FieldPattern fieldPattern = fieldPatterns[randomIndex];
-        yield return StartCoroutine(fieldPattern.ExecutePattern());
+        if (fieldPatterns.Count <= 0){
+            yield break;
+        }
+
+        if (wave <= fieldPatterns.Count){
+            fieldPattern = fieldPatterns[earlyPatternIndex];
+
+            yield return StartCoroutine(fieldPattern.ExecutePattern());
+
+            earlyPatternIndex++;
+            earlyPatternIndex %= fieldPatterns.Count;
+        }
+        else{
+            int randomIndex = Random.Range(0, fieldPatterns.Count);
+            fieldPattern = fieldPatterns[randomIndex];
+
+            yield return StartCoroutine(fieldPattern.ExecutePattern());
+        }
+
         
         StartCoroutine(StartWave());
     }
@@ -41,6 +61,8 @@ public class FieldManager : MonoBehaviour
         StopAllCoroutines();
         wave = 0;
     }
+
+    
 }
 
 public enum PatternType{

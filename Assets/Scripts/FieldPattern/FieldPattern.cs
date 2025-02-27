@@ -1,11 +1,15 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 abstract public class FieldPattern : MonoBehaviour
 {
     [SerializeField] protected GameObject enemyPrefab;
     [SerializeField] protected float coolTimeAfterExecuted;
+    [SerializeField] protected float coolTimeAfterClear;
     public float CoolTimeAfterExecuted => coolTimeAfterExecuted;
+
+    protected List<GameObject> enemies = new List<GameObject>();
 
     [SerializeField] protected int minSpawnEnemyCnt;
     public int MinSpawnEnemyCnt => minSpawnEnemyCnt;
@@ -21,7 +25,7 @@ abstract public class FieldPattern : MonoBehaviour
     protected Vector3 cameraBottomRightCoord;
     protected Vector3 cameraBottomLeftCoord;
 
-    private void Awake() {
+    virtual protected void Awake() {
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
 
         GetCameraEdgeCoordinate();

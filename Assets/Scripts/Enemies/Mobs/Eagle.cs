@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -5,19 +6,20 @@ public class Eagle : Mob
 {
     private Vector3 facingDirection;
     private Vector3 playerFacingDirection;
+    [SerializeField] private float blinkIntervalTime;
+
     protected override void Awake()
     {
         base.Awake();
-
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        Vector3 playerFacingDirection = (player.transform.position - transform.position).normalized;
-
-        float angle = Mathf.Atan2(playerFacingDirection.y, playerFacingDirection.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, angle);
-
-        facingDirection = gameObject.transform.right.normalized;
         
-        InvokeRepeating(nameof(ShootBullet),0.2f, 0.7f);
+        StartCoroutine(nameof(ExecuteBlinkingEffect));
+    }
+
+    public override void OnDeath()
+    {
+        Debug.Log("Eagle is Dead");
+        SoundEffectManager.Instance.PlayWithRandomPitch(SoundEffectType.DefaultEnemyDead);
+        base.OnDeath();
     }
 
     //! Actually don't know why it works perfectly. I should study about this math shit.
@@ -30,5 +32,43 @@ public class Eagle : Mob
 
             bullet.transform.rotation = Quaternion.Euler(0, 0, basicAngle) * Quaternion.Euler(0,0, 15 * i);
         }
+    }
+
+    private IEnumerator ExecuteBlinkingEffect(){
+        Color originColor = spriteRenderer.color;
+        Color lowAlphaColor = originColor;
+        Color highAlphaColor = originColor;
+
+        rb.simulated = false;
+
+        Quaternion rotateAngle = Quaternion.Euler(0,0, 180);
+        transform.rotation = rotateAngle;
+
+        lowAlphaColor.a = 0.5f;
+        highAlphaColor.a = 0.8f;
+
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        Vector3 playerFacingDirection = (player.transform.position - transform.position).normalized;
+
+        float angle = Mathf.Atan2(playerFacingDirection.y, playerFacingDirection.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, angle);
+
+        facingDirection = gameObject.transform.right.normalized;
+        
+        for (int i = 0; i < 3; i++){
+
+            spriteRenderer.color = lowAlphaColor;
+
+            yield return new WaitForSeconds(blinkIntervalTime);
+
+            spriteRenderer.color = highAlphaColor;
+            
+            yield return new WaitForSeconds(blinkIntervalTime);
+        }
+
+        spriteRenderer.color = originColor;
+        rb.simulated = true;
+
+        InvokeRepeating(nameof(ShootBullet),0.2f, 0.7f);
     }
 }

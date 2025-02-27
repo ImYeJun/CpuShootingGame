@@ -12,11 +12,11 @@ public class GameStartButton : MonoBehaviour, IPointerEnterHandler, IPointerExit
     }
 
     public void OnPointerEnter(PointerEventData eventData){
-        StartFading(0.5f, 0.2f); // Smooth fade to 0.5 alpha over 0.2 seconds
+        // StartFading(0.5f, 0.2f); // Smooth fade to 0.5 alpha over 0.2 seconds
     }
 
     public void OnPointerExit(PointerEventData eventData){
-        StartFading(1.0f, 0.2f); // Smooth fade back to 1.0 alpha over 0.2 seconds
+        // StartFading(1.0f, 0.2f); // Smooth fade back to 1.0 alpha over 0.2 seconds
     }
 
     public void OnPointerClick(PointerEventData eventData){

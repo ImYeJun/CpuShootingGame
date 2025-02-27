@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
 
     //* this code is only for testing
     private void Start() {
-        InvokeRepeating("Shoot", 0f, shootInterval); // Call Shoot() repeatedly every shootInterval seconds
+        InvokeRepeating(nameof(Shoot), 0f, shootInterval); // Call Shoot() repeatedly every shootInterval seconds
     }
 
     private void FixedUpdate()
@@ -45,7 +45,13 @@ public class PlayerController : MonoBehaviour
     //* this code is only for testing
     public void Shoot(){
         Debug.Log("Shooting!");
-        GameObject testBullet = Instantiate(PlayerBasicBullet, transform.position, transform.rotation * Quaternion.Euler(0,0,90));
-        testBullet.SetActive(true);
+
+        GameObject bullet = PlayerBulletManager.Instance.GetBullet();
+
+        bullet.transform.position = transform.position;
+        bullet.SetActive(true);
+
+        // GameObject testBullet = Instantiate(PlayerBasicBullet, transform.position, transform.rotation * Quaternion.Euler(0,0,90));
+        // testBullet.SetActive(true);
     }
 }

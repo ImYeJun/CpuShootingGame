@@ -24,7 +24,17 @@ public class FieldManager : MonoBehaviour
     }
 
     private void Start() {
+        //* This code is executed when testing in PlayScene
+        // StartGame()
+    }
+
+    public IEnumerator StartGame(){
         earlyPatternIndex = 0;
+
+        //! Why I fucking need a loading time?
+        //! If I don't put this code, The first executed pattern doens't work properly
+        //! I don't know the fxxking reason. Maybe beacause of sequence shit?
+        yield return new WaitForSeconds(0.5f); 
 
         StartCoroutine(StartWave());
     }

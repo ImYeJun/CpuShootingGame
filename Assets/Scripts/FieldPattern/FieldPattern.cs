@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 abstract public class FieldPattern : MonoBehaviour
@@ -38,10 +39,12 @@ abstract public class FieldPattern : MonoBehaviour
     [SerializeField] protected AnimationCurve minEnemySpawnCntGraph;
     [SerializeField] protected AnimationCurve maxEnemySpawnCntGraph;
 
+    [Header("WaveDifficultyPoint")]
+    public List<WaveDifficultyPoint> minEnemySpawnCntWaveDifficultyPoints;
+    public List<WaveDifficultyPoint> maxEnemySpawnCntWaveDifficultyPoints;
+    
     //* -1 means that the executed wave number is under earlyPatternIndex.
     public abstract IEnumerator ExecutePattern(int wave = -1);
-    protected abstract void CalculateActualWaveVariable(int wave);
-
     private Camera mainCamera;
     protected Vector3 cameraTopRightCoord;
     protected Vector3 cameraTopLeftCoord;
@@ -57,8 +60,37 @@ abstract public class FieldPattern : MonoBehaviour
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
 
         GetCameraEdgeCoordinate();
+        SetDifficultyGraph();
     }
 
+    protected virtual void CalculateActualWaveVariable(int wave){
+        actualMinSpawnEnemyCnt = (int)minEnemySpawnCntGraph.Evaluate(wave);
+        actualMaxSpawnEnemyCnt = (int)maxEnemySpawnCntGraph.Evaluate(wave);
+    }
+
+    [ContextMenu("SetDifficultyGraph")]
+    public void SetDifficultyGraph(){
+        minEnemySpawnCntGraph.keys = new Keyframe[0];
+        maxEnemySpawnCntGraph.keys = new Keyframe[0];
+
+        foreach(WaveDifficultyPoint point in minEnemySpawnCntWaveDifficultyPoints){
+            minEnemySpawnCntGraph.AddKey(point.wave, point.value);
+        }
+
+        for (int i = 0; i < minEnemySpawnCntGraph.keys.Length; i++){
+            AnimationUtility.SetKeyLeftTangentMode(minEnemySpawnCntGraph, i , AnimationUtility.TangentMode.Constant);
+            AnimationUtility.SetKeyRightTangentMode(minEnemySpawnCntGraph, i , AnimationUtility.TangentMode.Constant);
+        }
+
+        foreach(WaveDifficultyPoint point in maxEnemySpawnCntWaveDifficultyPoints){
+            maxEnemySpawnCntGraph.AddKey(point.wave, point.value);
+        }
+
+        for (int i = 0; i < maxEnemySpawnCntGraph.keys.Length; i++){
+            AnimationUtility.SetKeyLeftTangentMode(maxEnemySpawnCntGraph, i , AnimationUtility.TangentMode.Constant);
+            AnimationUtility.SetKeyRightTangentMode(maxEnemySpawnCntGraph, i , AnimationUtility.TangentMode.Constant);
+        }
+    }
 
     private void GetCameraEdgeCoordinate(){
             // Get the orthographic size and aspect ratio of the camera
@@ -97,7 +129,6 @@ abstract public class FieldPattern : MonoBehaviour
     }
 }
 
-//! Add this logic to Blueprint
 [Serializable]
 public struct WaveDifficultyPoint{
     public int wave;

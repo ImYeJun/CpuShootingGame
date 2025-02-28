@@ -45,6 +45,94 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 145349317164077185, guid: eb963dab498d4b645b4057e56d6a9a42, type: 3}
-  coolTimeAfterExecuted: 5
-  minSpawnEnemyCnt: 2
-  maxSpawnEnemyCnt: 4
+  coolTimeAfterExecuted: 10
+  actualCoolTimeAfterExectued: 0
+  coolTimeAfterClear: 4
+  actualCoolTimeAfterClear: 0
+  minSpawnEnemyCnt: 3
+  actualMinSpawnEnemyCnt: 0
+  maxSpawnEnemyCnt: 3
+  actualMaxSpawnEnemyCnt: 0
+  minEnemySpawnCntGraph:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -1
+      value: 1
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 35
+      value: 2
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  maxEnemySpawnCntGraph:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -1
+      value: 1
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 15
+      value: 2
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 35
+      value: 3
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 40
+      value: 4
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  minEnemySpawnCntWaveDifficultyPoints:
+  - wave: -1
+    value: 1
+  - wave: 35
+    value: 2
+  maxEnemySpawnCntWaveDifficultyPoints:
+  - wave: -1
+    value: 1
+  - wave: 15
+    value: 2
+  - wave: 35
+    value: 3
+  - wave: 40
+    value: 4
+  topSpawnGap: 2
+  bottomSpawnGap: 7.5
+  enemyAreaRadius: 1

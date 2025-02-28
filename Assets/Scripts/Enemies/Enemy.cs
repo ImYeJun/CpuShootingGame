@@ -1,5 +1,5 @@
 using System.Collections;
-using UnityEditor.Analytics;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -30,7 +30,9 @@ public abstract class Enemy : MonoBehaviour
         CancelInvoke(nameof(ShootBullet));
 
         ScoreManager.Instance.AddScore(killScore);
-        Destroy(gameObject);
+        // Destroy(gameObject);
+    
+        DestroyTracker.DestroyWithLog(gameObject);
     }
 
     public void DecreaseHealth(int damage = 1){
@@ -53,8 +55,9 @@ public abstract class Enemy : MonoBehaviour
         }
 
         if (collision.tag == "DeSpawnArea"){
-            Debug.Log("Despawned by touching the DespwanArea");
-            Destroy(gameObject);
+            // Debug.Log("Despawned by touching the DespwanArea");
+            // Destroy(gameObject);
+            DestroyTracker.DestroyWithLog(gameObject);
         }
     }
 
@@ -74,4 +77,16 @@ public abstract class Enemy : MonoBehaviour
     }
 
 
+}
+
+public class DestroyTracker : MonoBehaviour
+{
+    public static void DestroyWithLog(GameObject obj,
+        [CallerFilePath] string file = "",
+        [CallerMemberName] string method = "",
+        [CallerLineNumber] int line = 0)
+    {
+        Debug.Log($"Destroy() called on {obj.name} from {file}, method: {method}, line: {line}");
+        Destroy(obj);
+    }
 }

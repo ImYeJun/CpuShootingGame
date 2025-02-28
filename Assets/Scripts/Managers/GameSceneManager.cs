@@ -24,9 +24,9 @@ public class GameSceneManager : MonoBehaviour
 
         switch (type){
             case SceneType.PlayScene:
+                StartCoroutine(FieldManager.Instance.StartGame());
                 ScoreManager.Instance.InitializeScore();
                 BgmManager.Instance.SetBgm(BgmType.PlaySceneBgm);
-                StartCoroutine(FieldManager.Instance.StartWave());
                 //* Player Health is initialized in PlayerHeathManager.
                 break;
 

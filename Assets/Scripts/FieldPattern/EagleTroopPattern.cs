@@ -14,10 +14,10 @@ public class EagleTroopPattern : FieldPattern
     public override IEnumerator ExecutePattern(int wave = -1)
     {
         List<GameObject> enemies = new List<GameObject>();
-
+        CalculateActualWaveVariable(wave);
         Debug.Log("EagleTroopPattern Exectued");
     
-        int spawnEnemyCnt = Random.Range(minSpawnEnemyCnt, maxSpawnEnemyCnt);
+        int spawnEnemyCnt = Random.Range(actualMinSpawnEnemyCnt, actualMaxSpawnEnemyCnt);
         List<Vector3> spawnPoints = new List<Vector3>();
         int maxSpawnTrial = 20;
 
@@ -63,8 +63,5 @@ public class EagleTroopPattern : FieldPattern
 
         Debug.Log("EagleTroopPattern Ended");
     }
-    protected override void CalculateActualWaveVariable(int wave)
-    {
-        throw new System.NotImplementedException();
-    }
+
 }

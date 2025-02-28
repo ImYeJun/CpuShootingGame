@@ -52,10 +52,11 @@ public class HomingBulletPattern : FieldPattern
     public override IEnumerator ExecutePattern(int wave = -1)
     {
         List<GameObject> enemies = new List<GameObject>();
+        CalculateActualWaveVariable(wave);
 
         Debug.Log("HomingBulletPattern Exectued");
     
-        int spawnEnemyCnt = Random.Range(minSpawnEnemyCnt, maxSpawnEnemyCnt);
+        int spawnEnemyCnt = Random.Range(actualMinSpawnEnemyCnt, actualMaxSpawnEnemyCnt);
         List<Vector3> spawnPoints = GetSpawnPoints(spawnEnemyCnt);
 
         for (int i = 0; i < spawnEnemyCnt; i++){
@@ -68,30 +69,29 @@ public class HomingBulletPattern : FieldPattern
         Debug.Log("HomingBulletPattern Ended");
     }
 
-    protected override void CalculateActualWaveVariable(int wave)
-    {
-        throw new System.NotImplementedException();
-    }
+    // * This code is only for testing
+    // private void Update() {
+    //     if (isDrawingActivate){
+    //         foreach (GameObject point in spawnLinePoint){
+    //             point.SetActive(true);
+    //         }
+    //     }
+    //     else{
+    //         pathPoints.Add(drawPoint);
+    //         lineRenderer.positionCount = pathPoints.Count;
+    //         lineRenderer.SetPositions(pathPoints.ToArray());
 
-    // * This code is kinda resource taking. Maybe need to be refactored?
-    private void Update() {
-        if (isDrawingActivate){
-            foreach (GameObject point in spawnLinePoint){
-                point.SetActive(true);
-            }
-        }
-        else{
-            pathPoints.Add(drawPoint);
-            lineRenderer.positionCount = pathPoints.Count;
-            lineRenderer.SetPositions(pathPoints.ToArray());
+    //         foreach (GameObject point in spawnLinePoint){
+    //             if (point == null){
+    //                 return;
+    //             }
 
-            foreach (GameObject point in spawnLinePoint){
-                point.SetActive(false);
-            }
+    //             point.SetActive(false);
+    //         }
 
-            ExecuteDrawSpawnLine();
-        }
-    }
+    //         ExecuteDrawSpawnLine();
+    //     }
+    // }
 
     public List<Vector3> GetSpawnPoints(int cnt){
         List<Vector3> spawnPoints = new List<Vector3>();
@@ -182,7 +182,8 @@ public class HomingBulletPattern : FieldPattern
             spawnPoints.Add(spawnPoint);
         }
 
-        ExecuteDrawSpawnLine();
+        // * This code is only for testing
+        // ExecuteDrawSpawnLine(); 
 
         return spawnPoints;
     }

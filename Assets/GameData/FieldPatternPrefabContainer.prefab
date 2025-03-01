@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4642511603111832483
+--- !u!1 &1715810565149746127
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2637199200927050776}
-  - component: {fileID: 5291504338663262356}
+  - component: {fileID: 8303368436649796724}
+  - component: {fileID: 2219562149636112632}
   m_Layer: 0
   m_Name: FieldPatternPrefabContainer
   m_TagString: Untagged
@@ -17,1275 +17,359 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2637199200927050776
+--- !u!4 &8303368436649796724
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4642511603111832483}
+  m_GameObject: {fileID: 1715810565149746127}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.6283984, y: -2.7789445, z: -0.012486115}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2215978993736119286}
-  - {fileID: 5234907833059222165}
-  - {fileID: 9140568954082193244}
+  - {fileID: 5288059450662239130}
+  - {fileID: 2235029902382820089}
+  - {fileID: 2989150049713825584}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5291504338663262356
+--- !u!114 &2219562149636112632
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4642511603111832483}
+  m_GameObject: {fileID: 1715810565149746127}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f313479ce4510c40a2b48a03af5021e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &1769990798899501535
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2637199200927050776}
-    m_Modifications:
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: enemyAreaRadius
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxSpawnEnemyCnt
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minSpawnEnemyCnt
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: coolTimeAfterClear
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: coolTimeAfterExecuted
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.size
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.size
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[0].time
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[1].time
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[2].time
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[3].time
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[4].time
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[5].time
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[6].time
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[7].time
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[0].time
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[1].time
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[2].time
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[3].time
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[4].time
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[5].time
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[6].time
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[7].time
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[8].time
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[9].time
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[0].value
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[1].value
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[2].value
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[3].value
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[4].value
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[5].value
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[6].value
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[7].value
-      value: 23
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[0].value
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[10].time
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[1].value
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[2].value
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[3].value
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[4].value
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[5].value
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[6].value
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[7].value
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[8].value
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[9].value
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[10].value
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[0].inSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[1].inSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[2].inSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[3].inSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[4].inSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[5].inSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[6].inSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[7].inSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[0].inSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[1].inSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[2].inSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[3].inSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[4].inSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[5].inSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[6].inSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[7].inSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[8].inSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[9].inSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[0].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[0].outSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[1].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[1].outSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[2].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[2].outSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[3].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[3].outSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[4].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[4].outSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[5].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[5].outSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[6].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[6].outSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[7].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[7].outSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[0].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[0].outSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[10].inSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[1].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[1].outSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[2].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[2].outSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[3].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[3].outSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[4].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[4].outSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[5].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[5].outSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[6].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[6].outSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[7].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[7].outSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[8].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[8].outSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[9].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[9].outSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[0].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[1].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[2].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[3].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[4].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[5].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[6].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[7].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[0].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[10].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[10].outSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[1].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[2].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[3].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[4].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[5].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[6].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[7].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[8].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[9].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[10].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[0].tangentMode
-      value: 103
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[1].tangentMode
-      value: 103
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[2].tangentMode
-      value: 103
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[3].tangentMode
-      value: 103
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[4].tangentMode
-      value: 103
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[5].tangentMode
-      value: 103
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[6].tangentMode
-      value: 103
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[7].tangentMode
-      value: 103
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[0].wave
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[1].wave
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[2].wave
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[3].wave
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[4].wave
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[5].wave
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[6].wave
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[7].wave
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[0].tangentMode
-      value: 103
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[1].tangentMode
-      value: 103
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[2].tangentMode
-      value: 103
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[3].tangentMode
-      value: 103
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[4].tangentMode
-      value: 103
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[5].tangentMode
-      value: 103
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[6].tangentMode
-      value: 103
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[7].tangentMode
-      value: 103
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[8].tangentMode
-      value: 103
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[9].tangentMode
-      value: 103
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[0].wave
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[1].wave
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[2].wave
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[3].wave
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[4].wave
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[5].wave
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[6].wave
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[7].wave
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[8].wave
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[9].wave
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[0].value
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[1].value
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[2].value
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[3].value
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[4].value
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[5].value
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[6].value
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[7].value
-      value: 23
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[10].tangentMode
-      value: 103
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[0].value
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[10].wave
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[1].value
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[2].value
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[3].value
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[4].value
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[5].value
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[6].value
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[7].value
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[8].value
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[9].value
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: -6679859529979795365, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[10].value
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 455136686167501353, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -9.099976
-      objectReference: {fileID: 0}
-    - target: {fileID: 455136686167501353, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.5728335
-      objectReference: {fileID: 0}
-    - target: {fileID: 455136686167501353, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.03172699
-      objectReference: {fileID: 0}
-    - target: {fileID: 455136686167501353, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 455136686167501353, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 455136686167501353, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 455136686167501353, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 455136686167501353, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 455136686167501353, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 455136686167501353, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3916342624180792696, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-      propertyPath: m_Name
-      value: SeagullTroopPattern
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
---- !u!4 &2215978993736119286 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 455136686167501353, guid: 20e0bfafcde458a4aa981bebf7dddcef, type: 3}
-  m_PrefabInstance: {fileID: 1769990798899501535}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &2963323775762574117
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2637199200927050776}
-    m_Modifications:
-    - target: {fileID: 4317967933393397699, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: m_Name
-      value: HomingBulletPattern
-      objectReference: {fileID: 0}
-    - target: {fileID: 7041931854192806320, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -6.793447
-      objectReference: {fileID: 0}
-    - target: {fileID: 7041931854192806320, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.93533516
-      objectReference: {fileID: 0}
-    - target: {fileID: 7041931854192806320, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7041931854192806320, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7041931854192806320, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7041931854192806320, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7041931854192806320, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7041931854192806320, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7041931854192806320, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7041931854192806320, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: drawTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: enemyAreaRadius
-      value: 1.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxSpawnEnemyCnt
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minSpawnEnemyCnt
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: coolTimeAfterClear
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: coolTimeAfterExecuted
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: corretionToPlayerPoint
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: spawnLinePoint.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: topSpawnCoordCorrectionValue
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: sideSpawnCoordCorrectionValue
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: bottomSpawnCoordCorrectionValue
-      value: 5.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[0].time
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[1].time
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[2].time
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[3].time
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[4].time
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[0].time
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[1].time
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[2].time
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[3].time
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[0].value
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[1].value
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[2].value
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[3].value
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[4].value
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[0].value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[1].value
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[2].value
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[3].value
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[0].inSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[1].inSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[2].inSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[3].inSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[4].inSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[0].inSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[1].inSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[2].inSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[3].inSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[0].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[0].outSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[1].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[1].outSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[2].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[2].outSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[3].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[3].outSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[4].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[4].outSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[0].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[0].outSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[1].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[1].outSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[2].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[2].outSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[3].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[3].outSlope
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[0].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[1].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[2].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[3].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[4].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[0].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[1].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[2].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[3].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[0].tangentMode
-      value: 103
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[1].tangentMode
-      value: 103
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[2].tangentMode
-      value: 103
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[3].tangentMode
-      value: 103
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[4].tangentMode
-      value: 103
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[0].wave
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[1].wave
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[2].wave
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[3].wave
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[4].wave
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[0].tangentMode
-      value: 103
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[1].tangentMode
-      value: 103
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[2].tangentMode
-      value: 103
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[3].tangentMode
-      value: 103
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[0].wave
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[1].wave
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[2].wave
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[3].wave
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[0].value
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[1].value
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[2].value
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[3].value
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[4].value
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[0].value
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[1].value
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[2].value
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259408031832596663, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[3].value
-      value: 4
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4317967933393397699, guid: b9269950bcb075c499645183dfe54219, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6620438412675936186}
-  m_SourcePrefab: {fileID: 100100000, guid: b9269950bcb075c499645183dfe54219, type: 3}
---- !u!1 &1365531538967284966 stripped
+--- !u!1 &1719468112781081306
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4317967933393397699, guid: b9269950bcb075c499645183dfe54219, type: 3}
-  m_PrefabInstance: {fileID: 2963323775762574117}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
---- !u!120 &6620438412675936186
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2989150049713825584}
+  - component: {fileID: 8483789447848281103}
+  m_Layer: 0
+  m_Name: EagleTroopPattern
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2989150049713825584
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719468112781081306}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.3505955, y: 3.4539223, z: 0.04850923}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8303368436649796724}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8483789447848281103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719468112781081306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c820dda4ed2ecc47a0bdb18da4910c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 145349317164077185, guid: eb963dab498d4b645b4057e56d6a9a42, type: 3}
+  coolTimeAfterExecuted: 10
+  actualCoolTimeAfterExectued: 0
+  coolTimeAfterClear: 4
+  actualCoolTimeAfterClear: 0
+  minSpawnEnemyCnt: 3
+  actualMinSpawnEnemyCnt: 0
+  maxSpawnEnemyCnt: 3
+  actualMaxSpawnEnemyCnt: 0
+  minEnemySpawnCntGraph:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -1
+      value: 1
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 35
+      value: 2
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  maxEnemySpawnCntGraph:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -1
+      value: 1
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 15
+      value: 2
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 35
+      value: 3
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 40
+      value: 4
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  minEnemySpawnCntWaveDifficultyPoints:
+  - wave: -1
+    value: 1
+  - wave: 35
+    value: 2
+  maxEnemySpawnCntWaveDifficultyPoints:
+  - wave: -1
+    value: 1
+  - wave: 15
+    value: 2
+  - wave: 35
+    value: 3
+  - wave: 40
+    value: 4
+  topSpawnGap: 2
+  bottomSpawnGap: 7.5
+  enemyAreaRadius: 1
+--- !u!1 &4994804908830753930
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2235029902382820089}
+  - component: {fileID: 874494050599633918}
+  - component: {fileID: 883495535068489686}
+  m_Layer: 0
+  m_Name: HomingBulletPattern
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2235029902382820089
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4994804908830753930}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.793447, y: -0.93533516, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8303368436649796724}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &874494050599633918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4994804908830753930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7a16e2dbd013ea43b1d03ae3d5b7a5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 607024548240363529, guid: e3711b7cb665d0947a509a5131dcd684, type: 3}
+  coolTimeAfterExecuted: 7
+  actualCoolTimeAfterExectued: 0
+  coolTimeAfterClear: 3
+  actualCoolTimeAfterClear: 0
+  minSpawnEnemyCnt: 2
+  actualMinSpawnEnemyCnt: 0
+  maxSpawnEnemyCnt: 5
+  actualMaxSpawnEnemyCnt: 0
+  minEnemySpawnCntGraph:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -1
+      value: 1
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 5
+      value: 2
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 15
+      value: 3
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 50
+      value: 4
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  maxEnemySpawnCntGraph:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -1
+      value: 2
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 5
+      value: 3
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 20
+      value: 4
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 35
+      value: 4
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 50
+      value: 5
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  minEnemySpawnCntWaveDifficultyPoints:
+  - wave: -1
+    value: 2
+  - wave: 5
+    value: 2
+  - wave: 15
+    value: 3
+  - wave: 50
+    value: 4
+  maxEnemySpawnCntWaveDifficultyPoints:
+  - wave: -1
+    value: 2
+  - wave: 5
+    value: 3
+  - wave: 20
+    value: 4
+  - wave: 35
+    value: 4
+  - wave: 50
+    value: 5
+  isDrawingActivate: 0
+  drawTime: 1
+  bottomSpawnCoordCorrectionValue: 5.5
+  topSpawnCoordCorrectionValue: 0.3
+  sideSpawnCoordCorrectionValue: 0.7
+  spawnLinePoint:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  corretionToPlayerPoint: 3
+  enemyAreaRadius: 1.3
+--- !u!120 &883495535068489686
 LineRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1365531538967284966}
+  m_GameObject: {fileID: 4994804908830753930}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -1385,70 +469,280 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
---- !u!4 &5234907833059222165 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7041931854192806320, guid: b9269950bcb075c499645183dfe54219, type: 3}
-  m_PrefabInstance: {fileID: 2963323775762574117}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &6341933653263941000
-PrefabInstance:
+--- !u!1 &8749274408106458315
+GameObject:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2637199200927050776}
-    m_Modifications:
-    - target: {fileID: 1764741485498584894, guid: c58903ad2b18ec6438358ad398aa2175, type: 3}
-      propertyPath: m_Name
-      value: EagleTroopPattern
-      objectReference: {fileID: 0}
-    - target: {fileID: 2799761252764357332, guid: c58903ad2b18ec6438358ad398aa2175, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -7.3505955
-      objectReference: {fileID: 0}
-    - target: {fileID: 2799761252764357332, guid: c58903ad2b18ec6438358ad398aa2175, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.4539223
-      objectReference: {fileID: 0}
-    - target: {fileID: 2799761252764357332, guid: c58903ad2b18ec6438358ad398aa2175, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.04850923
-      objectReference: {fileID: 0}
-    - target: {fileID: 2799761252764357332, guid: c58903ad2b18ec6438358ad398aa2175, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2799761252764357332, guid: c58903ad2b18ec6438358ad398aa2175, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2799761252764357332, guid: c58903ad2b18ec6438358ad398aa2175, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2799761252764357332, guid: c58903ad2b18ec6438358ad398aa2175, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2799761252764357332, guid: c58903ad2b18ec6438358ad398aa2175, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2799761252764357332, guid: c58903ad2b18ec6438358ad398aa2175, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2799761252764357332, guid: c58903ad2b18ec6438358ad398aa2175, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c58903ad2b18ec6438358ad398aa2175, type: 3}
---- !u!4 &9140568954082193244 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2799761252764357332, guid: c58903ad2b18ec6438358ad398aa2175, type: 3}
-  m_PrefabInstance: {fileID: 6341933653263941000}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5288059450662239130}
+  - component: {fileID: 7817775390467193320}
+  m_Layer: 0
+  m_Name: SeagullTroopPattern
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5288059450662239130
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8749274408106458315}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.099976, y: -4.5728335, z: -0.03172699}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8303368436649796724}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7817775390467193320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8749274408106458315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c6015f679e05a347b0f28bafdcb6281, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 1920297314927383356, guid: 038b6540f5ae41446ae04286773966d7, type: 3}
+  coolTimeAfterExecuted: 6
+  actualCoolTimeAfterExectued: 0
+  coolTimeAfterClear: 3
+  actualCoolTimeAfterClear: 0
+  minSpawnEnemyCnt: 3
+  actualMinSpawnEnemyCnt: 0
+  maxSpawnEnemyCnt: 5
+  actualMaxSpawnEnemyCnt: 0
+  minEnemySpawnCntGraph:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -1
+      value: 3
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 5
+      value: 4
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 10
+      value: 6
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 15
+      value: 8
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 20
+      value: 10
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 25
+      value: 13
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 30
+      value: 15
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 35
+      value: 17
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 40
+      value: 18
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 45
+      value: 19
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 50
+      value: 20
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  maxEnemySpawnCntGraph:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -1
+      value: 5
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 5
+      value: 7
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 10
+      value: 9
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 15
+      value: 11
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 20
+      value: 13
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 25
+      value: 15
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 30
+      value: 17
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 35
+      value: 23
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  minEnemySpawnCntWaveDifficultyPoints:
+  - wave: -1
+    value: 3
+  - wave: 5
+    value: 4
+  - wave: 10
+    value: 6
+  - wave: 15
+    value: 8
+  - wave: 20
+    value: 10
+  - wave: 25
+    value: 13
+  - wave: 30
+    value: 15
+  - wave: 35
+    value: 17
+  - wave: 40
+    value: 18
+  - wave: 45
+    value: 19
+  - wave: 50
+    value: 20
+  maxEnemySpawnCntWaveDifficultyPoints:
+  - wave: -1
+    value: 5
+  - wave: 5
+    value: 7
+  - wave: 10
+    value: 9
+  - wave: 15
+    value: 11
+  - wave: 20
+    value: 13
+  - wave: 25
+    value: 15
+  - wave: 30
+    value: 17
+  - wave: 35
+    value: 23
+  enemyAreaRadius: 0.6

@@ -9,7 +9,6 @@ public class EagleTroopPattern : FieldPattern
     [SerializeField] private float topSpawnGap;
     [SerializeField] private float bottomSpawnGap;
     [SerializeField] private float enemyAreaRadius;
-    private int levelUpWaveUnit = 5;
     
     public override IEnumerator ExecutePattern(int wave = -1)
     {

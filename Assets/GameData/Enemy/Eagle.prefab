@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92fd2f627eaf7064ab696b1b5ef4a649, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 30
   killScore: 500
   enemyName: Eagle
   sorting: 

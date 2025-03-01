@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
@@ -36,10 +35,14 @@ abstract public class FieldPattern : MonoBehaviour
 
     [Space(7)]
     [Header("Difficulty Graph")]
+    [SerializeField] protected AnimationCurve coolTimeAfterExecuteGraph;
+    [SerializeField] protected AnimationCurve coolTimeAfterClearGraph;
     [SerializeField] protected AnimationCurve minEnemySpawnCntGraph;
     [SerializeField] protected AnimationCurve maxEnemySpawnCntGraph;
 
     [Header("WaveDifficultyPoint")]
+    public List<WaveDifficultyPoint> coolTimeAfterExecuteDifficultyPoints;
+    public List<WaveDifficultyPoint> coolTimeAfterClearDifficultyPoints;
     public List<WaveDifficultyPoint> minEnemySpawnCntWaveDifficultyPoints;
     public List<WaveDifficultyPoint> maxEnemySpawnCntWaveDifficultyPoints;
     
@@ -64,33 +67,71 @@ abstract public class FieldPattern : MonoBehaviour
     }
 
     protected virtual void CalculateActualWaveVariable(int wave){
+        actualCoolTimeAfterExectued = coolTimeAfterExecuteGraph.Evaluate(wave);
+        actualCoolTimeAfterClear = coolTimeAfterClearGraph.Evaluate(wave);
         actualMinSpawnEnemyCnt = (int)minEnemySpawnCntGraph.Evaluate(wave);
         actualMaxSpawnEnemyCnt = (int)maxEnemySpawnCntGraph.Evaluate(wave);
     }
 
     [ContextMenu("SetDifficultyGraph")]
-    public void SetDifficultyGraph(){
+    public void SetDifficultyGraph()
+    {
+        coolTimeAfterExecuteGraph.keys = new Keyframe[0];
+        coolTimeAfterClearGraph.keys = new Keyframe[0];
         minEnemySpawnCntGraph.keys = new Keyframe[0];
         maxEnemySpawnCntGraph.keys = new Keyframe[0];
 
-        foreach(WaveDifficultyPoint point in minEnemySpawnCntWaveDifficultyPoints){
+        foreach (WaveDifficultyPoint point in coolTimeAfterExecuteDifficultyPoints)
+        {
+            coolTimeAfterExecuteGraph.AddKey(point.wave, point.value);
+        }
+
+    #if UNITY_EDITOR
+        if (coolTimeAfterExecuteGraph.keys.Length >= 2)
+        {
+            AnimationUtility.SetKeyLeftTangentMode(coolTimeAfterExecuteGraph, 1, AnimationUtility.TangentMode.Constant);
+        }
+    #endif
+
+        foreach (WaveDifficultyPoint point in coolTimeAfterClearDifficultyPoints)
+        {
+            coolTimeAfterClearGraph.AddKey(point.wave, point.value);
+        }
+
+    #if UNITY_EDITOR
+        if (coolTimeAfterClearGraph.keys.Length >= 2)
+        {
+            AnimationUtility.SetKeyLeftTangentMode(coolTimeAfterClearGraph, 1, AnimationUtility.TangentMode.Constant);
+        }
+    #endif
+
+        foreach (WaveDifficultyPoint point in minEnemySpawnCntWaveDifficultyPoints)
+        {
             minEnemySpawnCntGraph.AddKey(point.wave, point.value);
         }
 
-        for (int i = 0; i < minEnemySpawnCntGraph.keys.Length; i++){
-            AnimationUtility.SetKeyLeftTangentMode(minEnemySpawnCntGraph, i , AnimationUtility.TangentMode.Constant);
-            AnimationUtility.SetKeyRightTangentMode(minEnemySpawnCntGraph, i , AnimationUtility.TangentMode.Constant);
+    #if UNITY_EDITOR
+        for (int i = 0; i < minEnemySpawnCntGraph.keys.Length; i++)
+        {
+            AnimationUtility.SetKeyLeftTangentMode(minEnemySpawnCntGraph, i, AnimationUtility.TangentMode.Constant);
+            AnimationUtility.SetKeyRightTangentMode(minEnemySpawnCntGraph, i, AnimationUtility.TangentMode.Constant);
         }
+    #endif
 
-        foreach(WaveDifficultyPoint point in maxEnemySpawnCntWaveDifficultyPoints){
+        foreach (WaveDifficultyPoint point in maxEnemySpawnCntWaveDifficultyPoints)
+        {
             maxEnemySpawnCntGraph.AddKey(point.wave, point.value);
         }
 
-        for (int i = 0; i < maxEnemySpawnCntGraph.keys.Length; i++){
-            AnimationUtility.SetKeyLeftTangentMode(maxEnemySpawnCntGraph, i , AnimationUtility.TangentMode.Constant);
-            AnimationUtility.SetKeyRightTangentMode(maxEnemySpawnCntGraph, i , AnimationUtility.TangentMode.Constant);
+    #if UNITY_EDITOR
+        for (int i = 0; i < maxEnemySpawnCntGraph.keys.Length; i++)
+        {
+            AnimationUtility.SetKeyLeftTangentMode(maxEnemySpawnCntGraph, i, AnimationUtility.TangentMode.Constant);
+            AnimationUtility.SetKeyRightTangentMode(maxEnemySpawnCntGraph, i, AnimationUtility.TangentMode.Constant);
         }
+    #endif
     }
+
 
     private void GetCameraEdgeCoordinate(){
             // Get the orthographic size and aspect ratio of the camera
@@ -112,14 +153,14 @@ abstract public class FieldPattern : MonoBehaviour
         float startTime = Time.time;
         float elapsedTime = 0.0f;
 
-        while (elapsedTime <= coolTimeAfterExecuted){
+        while (elapsedTime <= actualCoolTimeAfterExectued){
             elapsedTime = Time.time - startTime;
 
             int activatedEnemyCnt = enemies.Count(e => e != null);
 
             if (activatedEnemyCnt <= 0){
                 Debug.Log("All Enemies are Dead!");
-                yield return new WaitForSeconds(coolTimeAfterClear);
+                yield return new WaitForSeconds(actualCoolTimeAfterClear);
 
                 yield break;
             }
@@ -132,5 +173,5 @@ abstract public class FieldPattern : MonoBehaviour
 [Serializable]
 public struct WaveDifficultyPoint{
     public int wave;
-    public int value;
+    public float value;
 }

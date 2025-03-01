@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09bcc64a904210847b0bfcedab51f7d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 15
   killScore: 200
   enemyName: HomingBulletShooter
   sorting: 

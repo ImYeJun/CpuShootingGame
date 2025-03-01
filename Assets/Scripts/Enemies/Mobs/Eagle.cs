@@ -22,7 +22,6 @@ public class Eagle : Mob
         base.OnDeath();
     }
 
-    //! Actually don't know why it works perfectly. I should study about this math shit.
     public override void ShootBullet()
     {
         float basicAngle = Mathf.Atan2(-facingDirection.y, -facingDirection.x) * Mathf.Rad2Deg;
@@ -30,7 +29,7 @@ public class Eagle : Mob
         for (int i = -1; i <= 1; i++){
             GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
 
-            bullet.transform.rotation = Quaternion.Euler(0, 0, basicAngle) * Quaternion.Euler(0,0, 15 * i);
+            bullet.transform.rotation = Quaternion.Euler(0, 0, basicAngle) * Quaternion.Euler(0,0, 30 * i);
         }
     }
 
@@ -69,6 +68,6 @@ public class Eagle : Mob
         spriteRenderer.color = originColor;
         rb.simulated = true;
 
-        InvokeRepeating(nameof(ShootBullet),0.2f, 0.7f);
+        InvokeRepeating(nameof(ShootBullet),0.2f, 1.0f);
     }
 }

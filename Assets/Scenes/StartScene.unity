@@ -1127,6 +1127,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1669380452930316462, guid: a385faa541be393479377732b7a53ed5, type: 3}
+      propertyPath: maxSamePatternCnt
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1669380452930316462, guid: a385faa541be393479377732b7a53ed5, type: 3}
       propertyPath: fieldPatterns.Array.size
       value: 3
       objectReference: {fileID: 0}

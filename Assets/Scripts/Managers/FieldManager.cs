@@ -8,6 +8,10 @@ public class FieldManager : MonoBehaviour
     public static FieldManager Instance { get; private set; }
     [SerializeField] private int wave;
     [SerializeField] private List<FieldPattern> fieldPatterns; 
+    [SerializeField] private int maxSamePatternCnt;
+    private int samePatternCnt = 0;
+    private string previousPattern;
+    private string currentPattern;
     private int earlyPatternIndex;
     
     private void Awake()
@@ -56,11 +60,29 @@ public class FieldManager : MonoBehaviour
 
             earlyPatternIndex++;
             earlyPatternIndex %= fieldPatterns.Count;
+
+            currentPattern = ((PatternType)earlyPatternIndex).ToString();
+            previousPattern = currentPattern;
+            samePatternCnt = 0;
         }
         else{
-            int randomIndex = Random.Range(0, fieldPatterns.Count);
-            fieldPattern = fieldPatterns[randomIndex];
+            int randomIndex;
+            do{
+                randomIndex = Random.Range(0, fieldPatterns.Count);
+                currentPattern = ((PatternType)randomIndex).ToString();
 
+                if (currentPattern == previousPattern){
+                    samePatternCnt++;
+                }
+                else{
+                    samePatternCnt = 0;
+                }
+            }
+            while(samePatternCnt >= maxSamePatternCnt);
+
+            previousPattern = currentPattern;
+
+            fieldPattern = fieldPatterns[randomIndex];
             yield return StartCoroutine(fieldPattern.ExecutePattern(wave));
         }
 

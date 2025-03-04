@@ -7,6 +7,7 @@ public class TouchField : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
     private Vector3 previousPosition;
     private Vector3 currentPosition;
     private Vector3 moveDirection;
+    [SerializeField] private float tiltingResponsiveness;
     Animator animator;
     
     [SerializeField] private GameObject moveObject; // 이동할 오브젝트
@@ -30,7 +31,7 @@ public class TouchField : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
 
         PlayerController playerController = moveObject.GetComponent<PlayerController>();
 
-        if (Math.Abs(moveDirection.x) >= 0.07f){
+        if (Math.Abs(moveDirection.x) >= tiltingResponsiveness){
                 animator.SetBool("IsTitled", true);
                 if (moveDirection.x < 0){
                     animator.SetFloat("Direction", 0);

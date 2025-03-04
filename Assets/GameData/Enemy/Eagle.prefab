@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 7302830334325597261}
   - component: {fileID: 1427426892425196972}
   - component: {fileID: 200242838000170261}
-  - component: {fileID: 6145375999080577767}
+  - component: {fileID: 5852357967715209306}
+  - component: {fileID: 5170168935017703794}
   m_Layer: 0
   m_Name: Eagle
   m_TagString: Enemy
@@ -134,8 +135,27 @@ MonoBehaviour:
   enemyName: Eagle
   sorting: 
   bulletPrefab: {fileID: 8710308031660851049, guid: 48e11d303cc40d84abf673b44f0a0707, type: 3}
-  blinkIntervalTime: 0.3
---- !u!60 &6145375999080577767
+  blinkIntervalTime: 0.2
+--- !u!114 &5852357967715209306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145349317164077185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57c008f954fe54a8bb972de1018a2cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RootBone: {fileID: 0}
+  m_BoneTransforms: []
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_AlwaysUpdate: 1
+  m_AutoRebind: 0
+--- !u!60 &5170168935017703794
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

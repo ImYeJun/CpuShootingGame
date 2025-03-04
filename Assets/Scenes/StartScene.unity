@@ -1835,23 +1835,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: minEnemySpawnCntGraph.m_Curve.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearGraph.m_Curve.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteGraph.m_Curve.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearDifficultyPoints.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteDifficultyPoints.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.size
@@ -1859,7 +1859,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[1].time
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[2].time
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[1].time
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[2].time
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[3].time
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: shootIntervalRandomRangeGraph.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[0].value
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[1].value
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[2].value
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearGraph.m_Curve.Array.data[0].time
@@ -1867,7 +1903,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearGraph.m_Curve.Array.data[1].time
-      value: 15
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearGraph.m_Curve.Array.data[2].time
@@ -1875,14 +1911,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearGraph.m_Curve.Array.data[0].value
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearGraph.m_Curve.Array.data[1].value
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearGraph.m_Curve.Array.data[2].value
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: shootIntervalRandomRangeDifficultyPoints.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
@@ -1891,7 +1931,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteGraph.m_Curve.Array.data[1].time
-      value: 15
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteGraph.m_Curve.Array.data[2].time
@@ -1903,15 +1943,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearDifficultyPoints.Array.data[1].wave
-      value: 15
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearDifficultyPoints.Array.data[2].wave
       value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: coolTimeAfterClearGraph.m_Curve.Array.data[0].inSlope
+      value: -0.020833334
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearGraph.m_Curve.Array.data[1].inSlope
-      value: Infinity
+      value: -0.020833334
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearGraph.m_Curve.Array.data[2].inSlope
@@ -1919,11 +1963,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteGraph.m_Curve.Array.data[0].value
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteGraph.m_Curve.Array.data[1].value
-      value: 8
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteGraph.m_Curve.Array.data[2].value
@@ -1931,11 +1975,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearDifficultyPoints.Array.data[0].value
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearDifficultyPoints.Array.data[1].value
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearDifficultyPoints.Array.data[2].value
@@ -1946,12 +1990,16 @@ PrefabInstance:
       value: 0.33333334
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: coolTimeAfterClearGraph.m_Curve.Array.data[0].outSlope
+      value: -0.020833334
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearGraph.m_Curve.Array.data[1].inWeight
       value: 0.33333334
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearGraph.m_Curve.Array.data[1].outSlope
-      value: -0.02
+      value: -0.020833334
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearGraph.m_Curve.Array.data[2].inWeight
@@ -1979,7 +2027,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteDifficultyPoints.Array.data[1].wave
-      value: 15
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteDifficultyPoints.Array.data[2].wave
@@ -1991,27 +2039,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteGraph.m_Curve.Array.data[0].inSlope
-      value: 0
+      value: -0.115384616
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteGraph.m_Curve.Array.data[1].inSlope
-      value: Infinity
+      value: -0.115384616
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteGraph.m_Curve.Array.data[2].inSlope
       value: -0.12
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[1].wave
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[2].wave
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[3].wave
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[1].wave
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[2].wave
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[3].wave
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[4].wave
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteDifficultyPoints.Array.data[0].value
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteDifficultyPoints.Array.data[1].value
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteDifficultyPoints.Array.data[2].value
@@ -2027,7 +2099,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteGraph.m_Curve.Array.data[0].outSlope
-      value: 0
+      value: -0.115384616
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteGraph.m_Curve.Array.data[1].inWeight
@@ -2035,7 +2107,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteGraph.m_Curve.Array.data[1].outSlope
-      value: -0.06
+      value: -0.115384616
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteGraph.m_Curve.Array.data[2].inWeight
@@ -2046,12 +2118,48 @@ PrefabInstance:
       value: -0.12
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[0].value
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[1].value
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[2].value
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[3].value
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[0].value
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[2].value
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[3].value
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[4].value
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: shootIntervalRandomRangeGraph.m_Curve.Array.data[0].time
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: shootIntervalRandomRangeGraph.m_Curve.Array.data[1].time
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearGraph.m_Curve.Array.data[1].tangentMode
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteGraph.m_Curve.Array.data[0].outWeight
@@ -2066,8 +2174,56 @@ PrefabInstance:
       value: 0.33333334
       objectReference: {fileID: 0}
     - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: shootIntervalRandomRangeGraph.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteGraph.m_Curve.Array.data[1].tangentMode
-      value: 7
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: shootIntervalRandomRangeDifficultyPoints.Array.data[0].wave
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: shootIntervalRandomRangeDifficultyPoints.Array.data[1].wave
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: shootIntervalRandomRangeGraph.m_Curve.Array.data[0].inSlope
+      value: 0.032258064
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: shootIntervalRandomRangeGraph.m_Curve.Array.data[1].inSlope
+      value: 0.032258064
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: shootIntervalRandomRangeDifficultyPoints.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: shootIntervalRandomRangeGraph.m_Curve.Array.data[0].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: shootIntervalRandomRangeGraph.m_Curve.Array.data[0].outSlope
+      value: 0.032258064
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: shootIntervalRandomRangeGraph.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: shootIntervalRandomRangeGraph.m_Curve.Array.data[1].outSlope
+      value: 0.032258064
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: shootIntervalRandomRangeGraph.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 874494050599633918, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: shootIntervalRandomRangeGraph.m_Curve.Array.data[1].outWeight
+      value: 0.33333334
       objectReference: {fileID: 0}
     - target: {fileID: 1715810565149746127, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: m_Name
@@ -2090,20 +2246,28 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: speedRandomRangeGraph.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearGraph.m_Curve.Array.size
-      value: 3
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: speedRandomRangeDifficultyPoints.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteGraph.m_Curve.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearDifficultyPoints.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteDifficultyPoints.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.size
@@ -2114,16 +2278,76 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[1].time
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[2].time
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[3].time
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[4].time
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[5].time
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[6].time
-      value: 35
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[1].time
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[2].time
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[3].time
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[4].time
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[5].time
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[6].time
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: speedRandomRangeGraph.m_Curve.Array.data[0].time
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: speedRandomRangeGraph.m_Curve.Array.data[1].time
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[0].value
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[1].value
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[2].value
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[3].value
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[4].value
@@ -2135,11 +2359,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: maxEnemySpawnCntGraph.m_Curve.Array.data[6].value
-      value: 23
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[1].value
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[2].value
@@ -2159,7 +2383,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: minEnemySpawnCntGraph.m_Curve.Array.data[6].value
-      value: 20
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: speedRandomRangeGraph.m_Curve.Array.data[1].value
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearGraph.m_Curve.Array.data[0].time
@@ -2167,7 +2395,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearGraph.m_Curve.Array.data[1].time
-      value: 15
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearGraph.m_Curve.Array.data[2].time
@@ -2175,15 +2403,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearGraph.m_Curve.Array.data[0].value
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearGraph.m_Curve.Array.data[1].value
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearGraph.m_Curve.Array.data[2].value
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: speedRandomRangeDifficultyPoints.Array.data[0].wave
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: speedRandomRangeDifficultyPoints.Array.data[1].wave
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: speedRandomRangeGraph.m_Curve.Array.data[0].inSlope
+      value: 0.10526316
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: speedRandomRangeGraph.m_Curve.Array.data[1].inSlope
+      value: 0.10526316
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteGraph.m_Curve.Array.data[0].time
@@ -2191,7 +2435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteGraph.m_Curve.Array.data[1].time
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteGraph.m_Curve.Array.data[2].time
@@ -2206,20 +2450,44 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: speedRandomRangeDifficultyPoints.Array.data[1].value
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: speedRandomRangeGraph.m_Curve.Array.data[0].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: speedRandomRangeGraph.m_Curve.Array.data[0].outSlope
+      value: 0.10526316
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: speedRandomRangeGraph.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: speedRandomRangeGraph.m_Curve.Array.data[1].outSlope
+      value: 0.10526316
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearDifficultyPoints.Array.data[0].wave
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearDifficultyPoints.Array.data[1].wave
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearDifficultyPoints.Array.data[2].wave
       value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: coolTimeAfterClearGraph.m_Curve.Array.data[0].inSlope
+      value: -0.05263158
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearGraph.m_Curve.Array.data[1].inSlope
-      value: Infinity
+      value: -0.05263158
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearGraph.m_Curve.Array.data[2].inSlope
@@ -2227,11 +2495,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteGraph.m_Curve.Array.data[0].value
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteGraph.m_Curve.Array.data[1].value
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteGraph.m_Curve.Array.data[2].value
@@ -2246,12 +2514,20 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: speedRandomRangeGraph.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: speedRandomRangeGraph.m_Curve.Array.data[1].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearDifficultyPoints.Array.data[0].value
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearDifficultyPoints.Array.data[1].value
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearDifficultyPoints.Array.data[2].value
@@ -2262,12 +2538,16 @@ PrefabInstance:
       value: 0.33333334
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: coolTimeAfterClearGraph.m_Curve.Array.data[0].outSlope
+      value: -0.05263158
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearGraph.m_Curve.Array.data[1].inWeight
       value: 0.33333334
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearGraph.m_Curve.Array.data[1].outSlope
-      value: -0.02
+      value: -0.05263158
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearGraph.m_Curve.Array.data[2].inWeight
@@ -2295,7 +2575,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteDifficultyPoints.Array.data[1].wave
-      value: 15
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteDifficultyPoints.Array.data[2].wave
@@ -2303,11 +2583,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteGraph.m_Curve.Array.data[0].inSlope
-      value: 0
+      value: -0.36363637
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteGraph.m_Curve.Array.data[1].inSlope
-      value: Infinity
+      value: -0.36363637
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteGraph.m_Curve.Array.data[2].inSlope
@@ -2322,16 +2602,60 @@ PrefabInstance:
       value: -0.06666667
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[1].wave
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[2].wave
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[3].wave
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[4].wave
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[5].wave
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[6].wave
-      value: 35
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[1].wave
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[2].wave
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[3].wave
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[4].wave
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[5].wave
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[6].wave
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteDifficultyPoints.Array.data[0].value
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteDifficultyPoints.Array.data[1].value
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteDifficultyPoints.Array.data[2].value
@@ -2343,7 +2667,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteGraph.m_Curve.Array.data[0].outSlope
-      value: 0
+      value: -0.36363637
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteGraph.m_Curve.Array.data[1].inWeight
@@ -2351,7 +2675,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteGraph.m_Curve.Array.data[1].outSlope
-      value: -0.04
+      value: -0.36363637
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteGraph.m_Curve.Array.data[2].inWeight
@@ -2378,12 +2702,20 @@ PrefabInstance:
       value: -0.06666667
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[0].value
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
+      propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[1].value
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[2].value
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[3].value
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[4].value
@@ -2395,11 +2727,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[6].value
-      value: 23
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[1].value
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[2].value
@@ -2419,11 +2751,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[6].value
-      value: 20
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearGraph.m_Curve.Array.data[1].tangentMode
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteGraph.m_Curve.Array.data[0].outWeight
@@ -2447,7 +2779,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteGraph.m_Curve.Array.data[1].tangentMode
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7817775390467193320, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteGraph.m_Curve.Array.data[2].tangentMode
@@ -2515,11 +2847,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8483789447848281103, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearDifficultyPoints.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8483789447848281103, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteDifficultyPoints.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8483789447848281103, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.size
@@ -2579,7 +2911,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8483789447848281103, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearDifficultyPoints.Array.data[1].wave
-      value: 15
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 8483789447848281103, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearDifficultyPoints.Array.data[2].wave
@@ -2607,11 +2939,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8483789447848281103, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearDifficultyPoints.Array.data[0].value
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8483789447848281103, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearDifficultyPoints.Array.data[1].value
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8483789447848281103, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterClearDifficultyPoints.Array.data[2].value
@@ -2655,7 +2987,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8483789447848281103, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteDifficultyPoints.Array.data[1].wave
-      value: 15
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 8483789447848281103, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteDifficultyPoints.Array.data[2].wave
@@ -2671,23 +3003,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8483789447848281103, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[1].wave
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8483789447848281103, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: maxEnemySpawnCntWaveDifficultyPoints.Array.data[2].wave
-      value: 25
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 8483789447848281103, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: minEnemySpawnCntWaveDifficultyPoints.Array.data[1].wave
-      value: 15
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8483789447848281103, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteDifficultyPoints.Array.data[0].value
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8483789447848281103, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteDifficultyPoints.Array.data[1].value
-      value: 10
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8483789447848281103, guid: cdcfbebd8ff17e240a375790d3f4e95b, type: 3}
       propertyPath: coolTimeAfterExecuteDifficultyPoints.Array.data[2].value

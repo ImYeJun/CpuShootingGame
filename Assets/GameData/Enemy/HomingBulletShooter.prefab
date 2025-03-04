@@ -143,7 +143,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  blinkIntervalTime: 0.3
+  blinkIntervalTime: 0.2
 --- !u!50 &6487343355075488502
 Rigidbody2D:
   serializedVersion: 5

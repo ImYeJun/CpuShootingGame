@@ -81,14 +81,17 @@ public class PlayerInfoSendButton : MonoBehaviour
         if (request.result == UnityWebRequest.Result.Success)
         {
             Debug.Log("Response: " + request.downloadHandler.text);
-            Application.ExternalCall("receive user data : ", request.downloadHandler.text);
+            // Application.ExternalCall("receive user data : ", request.downloadHandler.text);
+            Application.ExternalEval($"receive user data : {request.downloadHandler.text}");
         }
         else
         {
             Debug.LogError("Error: " + request.error);
-            Application.ExternalCall("fail to receive user data", "{\"error\": \"" + request.error + "\"}");
+            // Application.ExternalCall("fail to receive user data ", "{\"error\": \"" + request.error + "\"}");
+            Application.ExternalEval($"fail to receive user data : {request.error}");
         }
     }
+    
 
     public void GetRequest(string url)
     {

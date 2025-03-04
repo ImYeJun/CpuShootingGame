@@ -12,8 +12,16 @@ public class HomingBulletShooter : Mob
     {
         base.Awake();
 
-        StartCoroutine(nameof(ExecuteBlinkingEffect));
         // InvokeRepeating(nameof(ShootBullet), coolTimeAfterSpawn, shootIntervalTime);
+    }
+    
+    public void StartToMove(float shootIntervalRandomRange){
+        float shootIntervalRandomValue = Random.Range(-shootIntervalRandomRange, shootIntervalRandomRange);
+
+        rotateTime += shootIntervalRandomRange;
+        shootIntervalTime += shootIntervalRandomRange;
+
+        StartCoroutine(nameof(ExecuteBlinkingEffect));
     }
 
     public override void ShootBullet()

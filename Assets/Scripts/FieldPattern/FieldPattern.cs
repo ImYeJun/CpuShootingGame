@@ -74,7 +74,7 @@ abstract public class FieldPattern : MonoBehaviour
     }
 
     [ContextMenu("SetDifficultyGraph")]
-    public void SetDifficultyGraph()
+    virtual public void SetDifficultyGraph()
     {
         coolTimeAfterExecuteGraph.keys = new Keyframe[0];
         coolTimeAfterClearGraph.keys = new Keyframe[0];
@@ -87,7 +87,7 @@ abstract public class FieldPattern : MonoBehaviour
         }
 
     #if UNITY_EDITOR
-        if (coolTimeAfterExecuteGraph.keys.Length >= 2)
+        if (coolTimeAfterExecuteGraph.keys.Length >= 3)
         {
             AnimationUtility.SetKeyLeftTangentMode(coolTimeAfterExecuteGraph, 1, AnimationUtility.TangentMode.Constant);
         }
@@ -99,7 +99,7 @@ abstract public class FieldPattern : MonoBehaviour
         }
 
     #if UNITY_EDITOR
-        if (coolTimeAfterClearGraph.keys.Length >= 2)
+        if (coolTimeAfterClearGraph.keys.Length >= 3)
         {
             AnimationUtility.SetKeyLeftTangentMode(coolTimeAfterClearGraph, 1, AnimationUtility.TangentMode.Constant);
         }

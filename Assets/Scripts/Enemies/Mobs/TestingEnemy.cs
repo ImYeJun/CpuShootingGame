@@ -3,13 +3,29 @@ using UnityEngine;
 public class TestingEnemy : Mob
 {
     [SerializeField] private float speed;
+    public float Speed{
+        get{
+            return speed;
+        }
+        set{
+            if (value < 0){
+                speed = 0;
+                return;
+            }
+
+            speed = value;
+        }
+    }
 
     override protected void Awake()
     {
         base.Awake();
-        rb.linearVelocity = new Vector2(0, -speed);
-        // InvokeRepeating(nameof(ShootBullet), 1f, 1f); 
     }
+
+    public void StartToMove(){
+        rb.linearVelocity = new Vector2(0, -speed);
+    }
+
     public override void ShootBullet()
     {
     }
@@ -20,4 +36,5 @@ public class TestingEnemy : Mob
         SoundEffectManager.Instance.PlayWithRandomPitch(SoundEffectType.SeagullDead);
         base.OnDeath();
     }
+
 }

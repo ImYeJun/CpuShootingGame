@@ -19,6 +19,10 @@ public class HomingBulletPattern : FieldPattern
     [SerializeField] private int corretionToPlayerPoint;
     [SerializeField] private float enemyAreaRadius;
 
+    [SerializeField] AnimationCurve shootIntervalRandomRangeGraph;
+    [SerializeField] List<WaveDifficultyPoint> shootIntervalRandomRangeDifficultyPoints;
+    [SerializeField] float actualShootIntervalRandomRange;
+
     private List<Vector3> spawnLinePointCoords = new List<Vector3>() 
     {
         new Vector3(),
@@ -39,6 +43,25 @@ public class HomingBulletPattern : FieldPattern
     private Vector3 p3;
     private Vector3 p4;
 
+    protected override void CalculateActualWaveVariable(int wave)
+    {
+        base.CalculateActualWaveVariable(wave);
+
+        actualShootIntervalRandomRange = shootIntervalRandomRangeGraph.Evaluate(wave);
+    }
+
+    [ContextMenu("HomingBulletPattern SetDifficultyGraph")]
+    public override void SetDifficultyGraph()
+    {
+        base.SetDifficultyGraph();
+
+        shootIntervalRandomRangeGraph.keys = new Keyframe[0];
+
+        foreach(WaveDifficultyPoint point in shootIntervalRandomRangeDifficultyPoints){
+            shootIntervalRandomRangeGraph.AddKey(point.wave, point.value);
+        }
+    }
+
     private void Start() {
         // Set line properties (optional)
         lineRenderer.startWidth = 0.1f;
@@ -46,14 +69,13 @@ public class HomingBulletPattern : FieldPattern
         lineRenderer.positionCount = 0;  // Start with no points in the line
 
         pathPoints = new List<Vector3>();  // Initialize pathPoints list
-
     }
 
     public override IEnumerator ExecutePattern(int wave = -1)
     {
         List<GameObject> enemies = new List<GameObject>();
         CalculateActualWaveVariable(wave);
-
+        
         Debug.Log("HomingBulletPattern Exectued");
     
         int spawnEnemyCnt = Random.Range(actualMinSpawnEnemyCnt, actualMaxSpawnEnemyCnt);
@@ -61,6 +83,10 @@ public class HomingBulletPattern : FieldPattern
 
         for (int i = 0; i < spawnEnemyCnt; i++){
             GameObject spawnEnemy = Instantiate(enemyPrefab, spawnPoints[i], Quaternion.identity);
+
+            HomingBulletShooter spawnedHomingBulletShooter = spawnEnemy.GetComponent<HomingBulletShooter>();
+            spawnedHomingBulletShooter.StartToMove(actualShootIntervalRandomRange);
+
             enemies.Add(spawnEnemy);
         }
         

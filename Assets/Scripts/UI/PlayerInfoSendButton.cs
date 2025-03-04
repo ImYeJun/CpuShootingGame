@@ -4,9 +4,15 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 
+public class BypassCertificate : CertificateHandler {
+    protected override bool ValidateCertificate(byte[] certificateData) {
+        // Always accept the certificate (not secure for production)
+        return true;
+    }
+}
 public class PlayerInfoSendButton : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI playerIdInputField;
+    [SerializeField] TextMeshProUGUI playerPhoneNumberInputField;
     [SerializeField] TextMeshProUGUI playerNickNameInputField;
     [SerializeField] TextMeshProUGUI invalidInputGuideText;
     [SerializeField] GameObject retryButton;
@@ -14,34 +20,36 @@ public class PlayerInfoSendButton : MonoBehaviour
     
     private void Update() {
         if (Input.GetKeyDown(KeyCode.Space)){
-            GetRequest("https://api.jbnucpu.co.kr/event");
+            GetRequest("https://api.jbnucpu.co.kr:8443/event");
         }
     }
 
     public void Onclick()
     {
-        string playerId = playerIdInputField.text.Trim(); 
+        string playerPhoneNumber = playerPhoneNumberInputField.text.Trim(); 
         string playerNickName = playerNickNameInputField.text;
 
-        if (playerId.Length > 0)
+        if (playerPhoneNumber.Length > 0)
         {
             // * Something stupid character is attached as a last charaacter of playerId so has to be removed
-            playerId = playerId.Substring(0, playerId.Length - 1);
+            playerPhoneNumber = playerPhoneNumber.Substring(0, playerPhoneNumber.Length - 1);
         }
 
-        if (playerId.Length == 9 && IsInteger(playerId))
+        if (playerPhoneNumber.Length == 11 && IsInteger(playerPhoneNumber))
         {
             Debug.Log($"Score : {ScoreManager.Instance.Score}");
-            Debug.Log($"Input Id : {playerId}");
+            Debug.Log($"Input Phone Number : {playerPhoneNumber}");
             Debug.Log($"Input NickName : {playerNickName}");
-            SendJsonData("https://api.jbnucpu.co.kr/event", new UserData { userId = playerId, nickName = playerNickName,score = ScoreManager.Instance.Score});
+
+            //* For the fast revising, userId field is considered as playerPhoneNumber
+            SendJsonData("https://api.jbnucpu.co.kr:8443/event", new UserData { userId = playerPhoneNumber, nickName = playerNickName,score = ScoreManager.Instance.Score});
             retryButton.SetActive(true);
             gameObject.transform.parent.gameObject.SetActive(false);
         }
         else
         {
-            Debug.Log("Invalid player ID.");
-            invalidInputGuideText.text = "It's not valid Student ID Form";
+            Debug.Log("Invalid player phone number.");
+            invalidInputGuideText.text = "유효한 전화번호 형식이 아닙니다";
         }
     }
 
@@ -73,10 +81,12 @@ public class PlayerInfoSendButton : MonoBehaviour
         if (request.result == UnityWebRequest.Result.Success)
         {
             Debug.Log("Response: " + request.downloadHandler.text);
+            Application.ExternalCall("receive user data : ", request.downloadHandler.text);
         }
         else
         {
             Debug.LogError("Error: " + request.error);
+            Application.ExternalCall("fail to receive user data", "{\"error\": \"" + request.error + "\"}");
         }
     }
 

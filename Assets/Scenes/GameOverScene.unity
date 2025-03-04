@@ -235,7 +235,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00098507, y: -163}
+  m_AnchoredPosition: {x: -0.00098507, y: -202.1}
   m_SizeDelta: {x: 225, y: 81}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &173682161
@@ -344,7 +344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f610c6d080d010f4689cb36e5944f40d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerIdInputField: {fileID: 622578999}
+  playerPhoneNumberInputField: {fileID: 622578999}
   playerNickNameInputField: {fileID: 557506098}
   invalidInputGuideText: {fileID: 1090956302}
   retryButton: {fileID: 757748031}
@@ -648,7 +648,7 @@ GameObject:
   - component: {fileID: 518662381}
   - component: {fileID: 518662380}
   m_Layer: 5
-  m_Name: PlayerIdInputField
+  m_Name: PlayerPhoneNumberInputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1100,8 +1100,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1138,7 +1138,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 5.820709, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1236,8 +1236,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70
-  m_fontSizeBase: 70
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1274,7 +1274,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 5.8207397, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1740,7 +1740,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0010147, y: -80.70001}
+  m_AnchoredPosition: {x: 0.000070369, y: -129.4}
   m_SizeDelta: {x: 468.69, y: 43.318}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1090956302
@@ -2102,8 +2102,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 518662379}
   - {fileID: 548900123}
+  - {fileID: 518662379}
   - {fileID: 173682160}
   - {fileID: 1090956301}
   m_Father: {fileID: 1758017381}
@@ -2649,7 +2649,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uD559\uBC88\n"
+  m_text: "\uC804\uD654\uBC88\uD638(- \uC81C\uC678)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6df8458d323adde48a1ccec0e2ee10d4, type: 2}
   m_sharedMaterial: {fileID: -8980261156143537758, guid: 6df8458d323adde48a1ccec0e2ee10d4, type: 2}
